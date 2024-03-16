@@ -1,5 +1,9 @@
-import { Flex, Text } from "@chakra-ui/react"
+"use client"
+
+import { Flex, IconButton, Text } from "@chakra-ui/react"
 import Container from "../Layout/Container"
+import { FaLinkedinIn } from "react-icons/fa"
+import { FaGithub } from "react-icons/fa"
 
 const Introduction = () => {
 	return (
@@ -10,7 +14,7 @@ const Introduction = () => {
 				gridRowGap="80px"
 				color="#c3cad5"
 			>
-				<Flex flexDir="column">
+				<Flex flex={1} flexDir="column">
 					<Text
 						fontSize={{ base: "76px" }}
 						fontWeight={700}
@@ -23,18 +27,19 @@ const Introduction = () => {
 					</Text>
 
 					<Text lineHeight="1.667em" fontSize="18px">
-						Lorem ipsum dolor sit amet consectetur adipiscing elit leo
-						quis ullamcorper quis id elementum convallis lacus gravida.
+						ReactJS and React Native Engineer
 					</Text>
 				</Flex>
 
-				<Flex flexDir="column">
+				<Flex flex={0.8} flexDir="column">
 					<Text color="#fff" fontWeight={700}>
 						ABOUT ME
 					</Text>
 					<Text>
-						Lorem ipsum dolor sit amet consectetur adipiscing elit leo
-						quis ullamcorper quis id elementum convallis lacus gravida.
+						With over six years of experience in ReactJS and React Native,
+						I excel in crafting scalable applications through
+						collaboration and innovation, driven by my passion for
+						technology and commitment to best practices.
 					</Text>
 
 					<Flex flexDir="column" my="50px">
@@ -42,14 +47,42 @@ const Introduction = () => {
 							MY WORK
 						</Text>
 						<Text>
-							Lorem ipsum dolor sit amet consectetur adipiscing elit leo
-							quis ullamcorper quis id elementum convallis lacus gravida.
+							Known for relentless dedication and tireless efforts, my
+							embody the epitome of hard work, consistently surpassing
+							expectations with unwavering commitment and diligence.
 						</Text>
 					</Flex>
 
 					<Text color="#fff" fontWeight={700}>
 						FOLLOW ME
 					</Text>
+					<Flex gap={4} mt="5px">
+						<IconButton
+							onClick={() =>
+								window.open(
+									"https://www.linkedin.com/in/henrique-hermes-59703a121/",
+									"_blank"
+								)
+							}
+							borderRadius={"full"}
+							fontSize={"25px"}
+							icon={<FaLinkedinIn />}
+							aria-label={"linkedin"}
+						/>
+
+						<IconButton
+							onClick={() =>
+								window.open(
+									"https://github.com/henriquehermes",
+									"_blank"
+								)
+							}
+							borderRadius={"full"}
+							fontSize={"25px"}
+							icon={<FaGithub />}
+							aria-label={"github"}
+						/>
+					</Flex>
 				</Flex>
 			</Flex>
 		</Container>

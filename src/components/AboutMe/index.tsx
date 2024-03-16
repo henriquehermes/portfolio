@@ -18,13 +18,26 @@ const AboutMe = () => {
 				>
 					<Flex flex={1} flexDir="column">
 						<Text lineHeight="1.231em" fontSize="52px" fontWeight={"700"}>
-							I’ve been developing websites since 2010
+							I’ve been developing Front End applications since 2018
 						</Text>
 						<Text mt="10px" color="#c3cad5">
-							Excepteur sint occaecat cupidatat non proident, sunt in
-							culpa qui officia deserunt mollit anim id est laborum aute
-							irure dolor in reprehenderit in voluptate velit esse cillum
-							dolore eu fugiat.
+							I am a Senior Frontend Developer, a leading company in the
+							field of web and mobile development, where I collaborate
+							closely with cross-functional teams to deliver scalable and
+							performant applications that meet the unique demands of
+							each project. With over six years of professional
+							experience, I have developed a strong expertise in ReactJS
+							and React Native frameworks, as well as other technologies
+							such as TypeScript, GraphQL, NextJS, and Storybook.
+							<br /> <br />
+							My passion for technology drives me to constantly learn new
+							skills and explore innovative solutions that can enhance
+							the user experience and satisfaction. I am also committed
+							to following the best practices of software development,
+							such as Agile principles, documentation, testing, and code
+							quality. I enjoy working in a dynamic and collaborative
+							environment, where I can contribute to the growth and
+							success of the company and its clients.
 						</Text>
 					</Flex>
 
@@ -35,14 +48,16 @@ const AboutMe = () => {
 							fontSize="32px"
 							fontWeight={"700"}
 						>
-							12 Years of experience
-							<br />
-							150 Successful projects
+							6 Years of experience
+							<br />5 Successful projects
 						</Text>
 						<Text mt="10px" color="#c3cad5">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-							sed do eiusmod tempor incididunt ut labore et dolore magna
-							aliqua ut enim ad minim veniam, quis nostrud exercitation.
+							With a rich portfolio spanning finance, electrical
+							vehicles, banking, and e-commerce, my projects stand as a
+							testament to versatility and expertise. From pioneering
+							apps in financial management to revolutionizing e-commerce
+							platforms, each endeavor reflects meticulous attention to
+							detail and a passion for innovation.
 						</Text>
 					</Flex>
 				</Flex>

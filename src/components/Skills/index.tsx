@@ -13,6 +13,9 @@ import Container from "../Layout/Container"
 import { Image } from "@chakra-ui/next-js"
 import { ReactElement } from "react"
 import { FaNodeJs, FaReact } from "react-icons/fa"
+import { TbBrandNextjs } from "react-icons/tb"
+import { IoLogoJavascript } from "react-icons/io"
+import { SiTypescript } from "react-icons/si"
 
 interface CardProps {
 	heading: string
@@ -64,28 +67,38 @@ const Skills = () => {
 					<Text>MY SKILLS</Text>
 				</Flex>
 
-				<Flex mt="30px" flexWrap="wrap" gridGap={6} justify="flex-start">
+				<Flex mt="30px" flexWrap="wrap" gridGap={6} justify="center">
 					<Card
 						heading={"ReactJS"}
 						icon={<Icon as={FaReact} w={10} h={10} />}
-						description={
-							"Lorem ipsum dolor sit amet catetur, adipisicing elit."
-						}
+						description={"6 years of experience"}
 					/>
 
 					<Card
 						heading={"React Native"}
 						icon={<Icon as={FaReact} w={10} h={10} />}
-						description={
-							"Lorem ipsum dolor sit amet catetur, adipisicing elit."
-						}
+						description={"6 years of experience"}
 					/>
 					<Card
 						heading={"Node JS"}
 						icon={<Icon as={FaNodeJs} w={10} h={10} />}
-						description={
-							"Lorem ipsum dolor sit amet catetur, adipisicing elit."
-						}
+						description={"1.5 years of experience"}
+					/>
+					<Card
+						heading={"NextJS"}
+						icon={<Icon as={TbBrandNextjs} w={10} h={10} />}
+						description={"5 years of experience"}
+					/>
+
+					<Card
+						heading={"TypeScript"}
+						icon={<Icon as={SiTypescript} w={10} h={10} />}
+						description={"6 years of experience"}
+					/>
+					<Card
+						heading={"JavaScript"}
+						icon={<Icon as={IoLogoJavascript} w={10} h={10} />}
+						description={"6 years of experience"}
 					/>
 				</Flex>
 			</Flex>

@@ -106,11 +106,11 @@ export default function Footer() {
 						<Text>
 							© 2024 Henrique Hermes Portfolio. All rights reserved
 						</Text>
-						<Stack direction={"row"} spacing={6}>
+						{/* <Stack direction={"row"} spacing={6}>
 							<SocialButton label={"Instagram"} href={"#"}>
 								<FaInstagram />
 							</SocialButton>
-						</Stack>
+						</Stack> */}
 					</Container>
 				</Box>
 			</Flex>
