@@ -112,7 +112,6 @@ export default function Carousel() {
 				type="text/css"
 				href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
 			/>
-
 			{/* Slider */}
 			<Slider {...settings} ref={(slider) => setSlider(slider)}>
 				{cards.map((user, index) => (
