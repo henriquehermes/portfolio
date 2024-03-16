@@ -9,14 +9,15 @@ const Introduction = () => {
 	return (
 		<Container pb="0px" minH={"100vh"}>
 			<Flex
-				paddingTop="100px"
+				paddingTop={{ base: "30px", md: "100px" }}
 				gridColumnGap="108px"
 				gridRowGap="80px"
 				color="#c3cad5"
+				flexDir={{ base: "column", md: "row" }}
 			>
 				<Flex flex={1} flexDir="column">
 					<Text
-						fontSize={{ base: "76px" }}
+						fontSize={{ base: "30px", md: "76px" }}
 						fontWeight={700}
 						lineHeight={"1.132em"}
 						color="#fff"
@@ -28,6 +29,18 @@ const Introduction = () => {
 
 					<Text lineHeight="1.667em" fontSize="18px">
 						ReactJS and React Native Engineer
+					</Text>
+
+					<Text lineHeight="1.667em" fontSize="18px">
+						Download my Resume{" "}
+						<Text
+							textDecor={"underline"}
+							as={"span"}
+							color="#075fe4"
+							fontWeight="bold"
+						>
+							here
+						</Text>
 					</Text>
 				</Flex>
 
