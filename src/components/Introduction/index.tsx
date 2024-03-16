@@ -3,7 +3,7 @@ import Container from "../Layout/Container"
 
 const Introduction = () => {
 	return (
-		<Container>
+		<Container pb="0px" minH={"100vh"}>
 			<Flex
 				paddingTop="100px"
 				gridColumnGap="108px"
