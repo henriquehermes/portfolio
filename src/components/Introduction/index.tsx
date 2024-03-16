@@ -1,9 +1,10 @@
 "use client"
 
-import { Flex, IconButton, Text } from "@chakra-ui/react"
+import { Flex, Icon, IconButton, Text } from "@chakra-ui/react"
 import Container from "../Layout/Container"
 import { FaLinkedinIn } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
+import { IoDocumentText } from "react-icons/io5"
 
 const Introduction = () => {
 	return (
@@ -31,17 +32,21 @@ const Introduction = () => {
 						ReactJS and React Native Engineer
 					</Text>
 
-					<Text lineHeight="1.667em" fontSize="18px">
-						Download my Resume{" "}
-						<Text
-							textDecor={"underline"}
-							as={"span"}
-							color="#075fe4"
-							fontWeight="bold"
-						>
-							here
+					<Flex align={"center"}>
+						<Text mr="5px" lineHeight="1.667em" fontSize="18px">
+							Download my Resume{" "}
+							<Text
+								cursor={"pointer"}
+								textDecor={"underline"}
+								as={"span"}
+								color="#075fe4"
+								fontWeight="bold"
+							>
+								here
+							</Text>
 						</Text>
-					</Text>
+						<IoDocumentText color="#075fe4" />
+					</Flex>
 				</Flex>
 
 				<Flex flex={0.8} flexDir="column">

@@ -22,6 +22,12 @@ const Header = () => {
 					<Flex display={{ base: "none", md: "flex" }} gap={10}>
 						<Button variant="unstyled">
 							<Text fontSize={"20px"} color="#f0f2f4">
+								Resume
+							</Text>
+						</Button>
+
+						<Button variant="unstyled">
+							<Text fontSize={"20px"} color="#f0f2f4">
 								About
 							</Text>
 						</Button>
