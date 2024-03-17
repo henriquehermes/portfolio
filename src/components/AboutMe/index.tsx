@@ -4,7 +4,7 @@ import Container from "../Layout/Container"
 const AboutMe = () => {
 	return (
 		<Container>
-			<Flex color="#fff" flexDir={"column"}>
+			<Flex id="about" color="#fff" flexDir={"column"}>
 				<Flex gap={15} fontWeight="700" fontSize={"20px"}>
 					<Text color="#075fe4">/</Text>
 					<Text>ABOUT ME</Text>

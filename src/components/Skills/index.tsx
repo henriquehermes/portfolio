@@ -8,12 +8,14 @@ import { TbBrandNextjs } from "react-icons/tb"
 import { IoLogoJavascript } from "react-icons/io"
 import {
 	SiAdobexd,
+	SiAmazonaws,
 	SiBitbucket,
 	SiCss3,
 	SiDocker,
 	SiFigma,
 	SiGraphql,
 	SiHtml5,
+	SiI18Next,
 	SiJest,
 	SiJirasoftware,
 	SiMongodb,
@@ -21,6 +23,7 @@ import {
 	SiRedux,
 	SiShopify,
 	SiStorybook,
+	SiStyledcomponents,
 	SiTestinglibrary,
 	SiTypescript,
 } from "react-icons/si"
@@ -40,6 +43,13 @@ const Card = ({ heading, description, icon }: CardProps) => {
 			overflow="hidden"
 			p={5}
 			bgColor="#2d343f"
+			transition="all .2s ease-in-out"
+			cursor={"pointer"}
+			_hover={{
+				transform: "scale(1.1)",
+				backgroundColor: "#075FE4",
+				color: "#fff",
+			}}
 		>
 			<Stack align={"start"} spacing={2}>
 				<Flex
@@ -54,10 +64,10 @@ const Card = ({ heading, description, icon }: CardProps) => {
 					{icon}
 				</Flex>
 				<Box mt={2}>
-					<Text fontSize="38px" fontWeight={700}>
+					<Text lineHeight={"1.234em"} fontSize="25px" fontWeight={700}>
 						{heading}
 					</Text>
-					<Text mt={1} fontSize={"20px"} color="#c3cad5">
+					<Text mt={1} fontSize={"16px"} color="#c3cad5">
 						{description}
 					</Text>
 				</Box>
@@ -65,17 +75,23 @@ const Card = ({ heading, description, icon }: CardProps) => {
 		</Box>
 	)
 }
-
 const Skills = () => {
 	return (
 		<Container backgroundColor="transparent">
-			<Flex color="#fff" mt="100px" flexDir={"column"}>
+			<Flex id="skills" color="#fff" mt="100px" flexDir={"column"}>
 				<Flex gap={15} fontWeight="700" fontSize={"20px"}>
 					<Text color="#075fe4">/</Text>
 					<Text>MY SKILLS</Text>
 				</Flex>
 
-				<Flex mt="30px" flexWrap="wrap" gridGap={6} justify="center">
+				<Flex
+					position="relative"
+					zIndex="1"
+					mt="30px"
+					flexWrap="wrap"
+					gridGap={{ base: 1, md: 2, lg: 4 }}
+					justify="center"
+				>
 					<Card
 						heading={"ReactJS"}
 						icon={<Icon as={FaReact} w={10} h={10} />}
@@ -198,6 +214,24 @@ const Skills = () => {
 						heading={"Figma"}
 						icon={<Icon as={SiFigma} w={10} h={10} />}
 						description={"6 years of experience"}
+					/>
+
+					<Card
+						heading={"i18n"}
+						icon={<Icon as={SiI18Next} w={10} h={10} />}
+						description={"4 years of experience"}
+					/>
+
+					<Card
+						heading={"Styled Components"}
+						icon={<Icon as={SiStyledcomponents} w={10} h={10} />}
+						description={"5 years of experience"}
+					/>
+
+					<Card
+						heading={"AWS"}
+						icon={<Icon as={SiAmazonaws} w={10} h={10} />}
+						description={"1 year of experience"}
 					/>
 				</Flex>
 			</Flex>

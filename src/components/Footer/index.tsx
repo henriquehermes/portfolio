@@ -15,7 +15,14 @@ import { FaArrowRight } from "react-icons/fa"
 
 export default function Footer() {
 	return (
-		<Box bgColor="#1b1f24" w={"full"} color={"#fff"}>
+		<Box
+			borderTopColor={"#5d6c83"}
+			borderTopWidth={1}
+			borderTopStyle={"solid"}
+			bgColor="#1b1f24"
+			w={"full"}
+			color={"#fff"}
+		>
 			<Flex
 				px="24px"
 				py="30px"

@@ -1,10 +1,11 @@
 "use client"
 
-import { Flex, Icon, IconButton, Text } from "@chakra-ui/react"
+import { Flex, IconButton, Text } from "@chakra-ui/react"
 import Container from "../Layout/Container"
 import { FaLinkedinIn } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
 import { IoDocumentText } from "react-icons/io5"
+import Typewriter from "typewriter-effect"
 
 const Introduction = () => {
 	return (
@@ -24,8 +25,19 @@ const Introduction = () => {
 						color="#fff"
 						marginBottom="12px"
 					>
-						I’m Henrique, a<br />
-						Senior Front End Developer
+						<Typewriter
+							options={{
+								autoStart: true,
+								delay: 100,
+							}}
+							onInit={(typewriter) => {
+								typewriter
+									.typeString(
+										"I’m Henrique, a<br />Senior Front End Developer"
+									)
+									.start()
+							}}
+						/>
 					</Text>
 
 					<Text lineHeight="1.667em" fontSize="18px">

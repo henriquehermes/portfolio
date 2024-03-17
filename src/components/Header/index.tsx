@@ -33,25 +33,45 @@ const Header = () => {
 							</Text>
 						</Button>
 
-						<Button variant="unstyled">
+						<Button
+							display="flex"
+							as={"a"}
+							href={"#about"}
+							variant="unstyled"
+						>
 							<Text fontSize={"20px"} color="#f0f2f4">
 								About
 							</Text>
 						</Button>
 
-						<Button variant="unstyled">
+						<Button
+							display="flex"
+							as={"a"}
+							href={"#skills"}
+							variant="unstyled"
+						>
 							<Text fontSize={"20px"} color="#f0f2f4">
 								My Skills
 							</Text>
 						</Button>
 
-						<Button variant="unstyled">
+						<Button
+							display="flex"
+							as={"a"}
+							href={"#portfolio"}
+							variant="unstyled"
+						>
 							<Text fontSize={"20px"} color="#f0f2f4">
 								My Portfolio
 							</Text>
 						</Button>
 
-						<Button variant="unstyled">
+						<Button
+							display="flex"
+							as={"a"}
+							href={"#contact"}
+							variant="unstyled"
+						>
 							<Text fontSize={"20px"} color="#f0f2f4">
 								Contact
 							</Text>

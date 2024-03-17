@@ -1,35 +1,25 @@
 "use client"
 
 import {
-	Box,
 	Button,
 	Flex,
 	FormControl,
 	FormLabel,
-	Heading,
-	IconButton,
 	Input,
 	InputGroup,
 	InputLeftElement,
 	Text,
-	Stack,
 	Textarea,
-	Tooltip,
-	useClipboard,
-	useColorModeValue,
-	VStack,
-	Divider,
 } from "@chakra-ui/react"
-import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from "react-icons/bs"
-import { MdEmail, MdOutlineEmail } from "react-icons/md"
+import { BsPerson } from "react-icons/bs"
+import { MdOutlineEmail } from "react-icons/md"
 import Container from "../Layout/Container"
 import { FaArrowRight } from "react-icons/fa"
 
 export default function Contact() {
-	const { hasCopied, onCopy } = useClipboard("example@example.com")
-
 	return (
 		<Flex
+			id="contact"
 			justify={"center"}
 			align={"center"}
 			minH={"100vh"}
