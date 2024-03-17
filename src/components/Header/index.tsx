@@ -1,8 +1,11 @@
+"use client"
+
 import {
 	Box,
 	Button,
 	Flex,
 	IconButton,
+	Image,
 	Menu,
 	MenuButton,
 	MenuItem,
@@ -13,8 +16,11 @@ import {
 } from "@chakra-ui/react"
 import Container from "../Layout/Container"
 import { PiHamburger } from "react-icons/pi"
+import { useEffect, useState } from "react"
 
 const Header = () => {
+	const [isVisible, setIsVisible] = useState(false)
+
 	const [isLargerThan900] = useMediaQuery("(min-width: 950px)")
 
 	const shake = keyframes`
@@ -25,20 +31,46 @@ const Header = () => {
 		100% { transform: rotate(0deg); }
 	`
 
+	const handleScroll = () => {
+		// Show the button when the user scrolls down
+		if (window.scrollY > 300) {
+			setIsVisible(true)
+		} else {
+			setIsVisible(false)
+		}
+	}
+
+	useEffect(() => {
+		// Add scroll event listener when the component mounts
+		window.addEventListener("scroll", handleScroll)
+
+		// Remove the event listener when the component unmounts
+		return () => {
+			window.removeEventListener("scroll", handleScroll)
+		}
+	}, [])
+
 	return (
-		<Box bgColor="#1b1f24" w={"full"} color={"#fff"}>
-			<Container>
-				<Flex paddingY="36px" w="full" justifyContent="space-between">
-					<Flex gap="10px">
-						<Text
-							color="#075fe4"
-							fontWeight="bold"
-							fontSize="28px"
-						>{`</>`}</Text>
+		<Box
+			pos={"fixed"}
+			zIndex={9999}
+			transition={"background 0.1s ease-in"}
+			bgColor={!isVisible ? "#1b1f24" : "black"}
+			w={"full"}
+			color={"#fff"}
+		>
+			<Container
+				transition={"background 0.1s ease-in"}
+				bgColor={!isVisible ? "#1b1f24" : "black"}
+				pb="0"
+			>
+				<Flex paddingY="14px" w="full" justifyContent="space-between">
+					<Flex width={"full"} align={"center"} gap="10px">
+						<Image src="/site-logo.svg" alt="site-logo" />
 						<Text
 							color="white"
 							fontWeight="bold"
-							fontSize="28px"
+							fontSize={{ base: "20px", md: "28px" }}
 						>{`Henrique Hermes`}</Text>
 					</Flex>
 
