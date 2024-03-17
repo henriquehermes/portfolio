@@ -39,7 +39,7 @@ const Card = ({ heading, description, icon }: CardProps) => {
 const Testimonials = () => {
 	return (
 		<Container>
-			<Flex color="#fff" mt="100px" flexDir={"column"}>
+			<Flex color="#fff" flexDir={"column"}>
 				<Flex gap={15} fontWeight="700" fontSize={"20px"}>
 					<Text color="#075fe4">/</Text>
 					<Text>MY TESTIMONIALS</Text>

@@ -69,8 +69,14 @@ export default function Footer() {
 						</Text>
 					</Flex>
 
-					<Flex mt={{ base: "15px", md: 0 }} flex={1} flexDir={"column"}>
+					<Flex
+						textAlign={{ base: "center", lg: "left" }}
+						mt={{ base: "15px", md: 0 }}
+						flex={1}
+						flexDir={"column"}
+					>
 						<Flex
+							justify={{ base: "center", lg: "flex-start" }}
 							gap={2}
 							align={"center"}
 							mb="15px"

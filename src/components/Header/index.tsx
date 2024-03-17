@@ -8,6 +8,7 @@ import {
 	MenuItem,
 	MenuList,
 	Text,
+	keyframes,
 	useMediaQuery,
 } from "@chakra-ui/react"
 import Container from "../Layout/Container"
@@ -15,6 +16,14 @@ import { PiHamburger } from "react-icons/pi"
 
 const Header = () => {
 	const [isLargerThan900] = useMediaQuery("(min-width: 950px)")
+
+	const shake = keyframes`
+	  	0% { transform: rotate(0deg); }
+		25% { transform: rotate(2deg); }
+		50% { transform: rotate(0eg); }
+		75% { transform: rotate(-2deg); }
+		100% { transform: rotate(0deg); }
+	`
 
 	return (
 		<Box bgColor="#1b1f24" w={"full"} color={"#fff"}>
@@ -78,19 +87,34 @@ const Header = () => {
 					) : (
 						<Flex gap={10}>
 							<Button
+								animation={`${shake} .2s ease infinite`}
 								variant="unstyled"
 								onClick={() => {
 									window.open(
 										"https://drive.google.com/file/d/1G5uPxvGYrfrClmnWqMQ-e4m5_zi0Xkbq/view"
 									)
 								}}
+								_hover={{
+									color: "#075fe4",
+									textDecoration: "underline",
+								}}
 							>
-								<Text fontSize={"20px"} color="#f0f2f4">
+								<Text
+									fontSize={"20px"}
+									color="#f0f2f4"
+									_hover={{
+										color: "#075fe4",
+									}}
+								>
 									Resume
 								</Text>
 							</Button>
 
 							<Button
+								_hover={{
+									color: "#075fe4",
+									textDecoration: "underline",
+								}}
 								display="flex"
 								as={"a"}
 								href={"#about"}
@@ -102,6 +126,10 @@ const Header = () => {
 							</Button>
 
 							<Button
+								_hover={{
+									color: "#075fe4",
+									textDecoration: "underline",
+								}}
 								display="flex"
 								as={"a"}
 								href={"#skills"}
@@ -113,6 +141,10 @@ const Header = () => {
 							</Button>
 
 							<Button
+								_hover={{
+									color: "#075fe4",
+									textDecoration: "underline",
+								}}
 								display="flex"
 								as={"a"}
 								href={"#portfolio"}
@@ -124,6 +156,10 @@ const Header = () => {
 							</Button>
 
 							<Button
+								_hover={{
+									color: "#075fe4",
+									textDecoration: "underline",
+								}}
 								display="flex"
 								as={"a"}
 								href={"#contact"}
