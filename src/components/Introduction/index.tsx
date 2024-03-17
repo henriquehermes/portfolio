@@ -38,9 +38,14 @@ const Introduction = () => {
 							<Text
 								cursor={"pointer"}
 								textDecor={"underline"}
-								as={"span"}
+								as={"a"}
 								color="#075fe4"
 								fontWeight="bold"
+								onClick={() => {
+									window.open(
+										"https://drive.google.com/file/d/1G5uPxvGYrfrClmnWqMQ-e4m5_zi0Xkbq/view"
+									)
+								}}
 							>
 								here
 							</Text>

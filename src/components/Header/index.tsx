@@ -20,7 +20,14 @@ const Header = () => {
 					</Flex>
 
 					<Flex display={{ base: "none", md: "flex" }} gap={10}>
-						<Button variant="unstyled">
+						<Button
+							variant="unstyled"
+							onClick={() => {
+								window.open(
+									"https://drive.google.com/file/d/1G5uPxvGYrfrClmnWqMQ-e4m5_zi0Xkbq/view"
+								)
+							}}
+						>
 							<Text fontSize={"20px"} color="#f0f2f4">
 								Resume
 							</Text>

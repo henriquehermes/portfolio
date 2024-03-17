@@ -10,42 +10,8 @@ import {
 	useColorModeValue,
 	VisuallyHidden,
 } from "@chakra-ui/react"
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
-import { ReactNode } from "react"
-import ContainerLayout from "../Layout/Container"
 import { Image } from "@chakra-ui/next-js"
-
-const SocialButton = ({
-	children,
-	label,
-	href,
-}: {
-	children: ReactNode
-	label: string
-	href: string
-}) => {
-	return (
-		<chakra.button
-			bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-			rounded={"full"}
-			w={8}
-			h={8}
-			cursor={"pointer"}
-			as={"a"}
-			href={href}
-			display={"inline-flex"}
-			alignItems={"center"}
-			justifyContent={"center"}
-			transition={"background 0.3s ease"}
-			_hover={{
-				bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
-			}}
-		>
-			<VisuallyHidden>{label}</VisuallyHidden>
-			{children}
-		</chakra.button>
-	)
-}
+import { FaArrowRight } from "react-icons/fa"
 
 export default function Footer() {
 	return (
@@ -59,35 +25,81 @@ export default function Footer() {
 				height="full"
 				flexDir="column"
 			>
-				<Container
-					as={Stack}
-					maxW={"6xl"}
-					py={4}
-					spacing={4}
-					justify={"center"}
-					align={"center"}
-				>
+				<Flex mb="40px" maxW={"6xl"} py={4} align={"center"}>
 					<Image
 						alt="site-logo"
-						width={50}
-						height={50}
-						src="/site-logo.svg"
+						width={150}
+						borderRadius={"full"}
+						height={150}
+						src="/myself.png"
 					/>
-					<Stack direction={"row"} spacing={6}>
-						<Box as="a" href={"#"}>
-							Home
-						</Box>
-						<Box as="a" href={"#"}>
-							About
-						</Box>
-						<Box as="a" href={"#"}>
-							Blog
-						</Box>
-						<Box as="a" href={"#"}>
-							Contact
-						</Box>
-					</Stack>
-				</Container>
+
+					<Flex flex={1} flexDir={"column"} ml="25px">
+						<Text fontWeight={700} fontSize={"38px"}>
+							Henrique Hermes
+						</Text>
+						<Text color="#8895aa" fontWeight={700} fontSize={"24px"}>
+							Senior Front End Developer
+						</Text>
+					</Flex>
+
+					<Flex flex={1} flexDir={"column"}>
+						<Flex
+							gap={2}
+							align={"center"}
+							mb="15px"
+							fontWeight={700}
+							fontSize={"38px"}
+						>
+							<Text as={"span"}>Get in touch </Text>
+							<FaArrowRight color="#075fe4" />
+						</Flex>
+
+						<Text fontWeight={700} color="#c3cad5" fontSize={"16px"}>
+							Email
+						</Text>
+
+						<Text
+							onClick={() => {
+								window.location.href =
+									"mailto:henriquehermes97@gmail.com"
+							}}
+							fontWeight={700}
+							fontSize={"22px"}
+							lineHeight={"1.273em"}
+							cursor={"pointer"}
+							_hover={{
+								textDecoration: "underline",
+							}}
+						>
+							henriquehermes97@gmail.com
+						</Text>
+
+						<Text
+							mt="15px"
+							fontWeight={700}
+							color="#c3cad5"
+							fontSize={"16px"}
+						>
+							Call me
+						</Text>
+
+						<Text
+							onClick={() => {
+								window.location.href = "tel:+61424155244"
+							}}
+							fontWeight={700}
+							fontSize={"22px"}
+							lineHeight={"1.273em"}
+							cursor={"pointer"}
+							_hover={{
+								textDecoration: "underline",
+							}}
+						>
+							+61 424155244
+						</Text>
+					</Flex>
+				</Flex>
 
 				<Box
 					borderTopWidth={1}
@@ -106,11 +118,6 @@ export default function Footer() {
 						<Text>
 							© 2024 Henrique Hermes Portfolio. All rights reserved
 						</Text>
-						{/* <Stack direction={"row"} spacing={6}>
-							<SocialButton label={"Instagram"} href={"#"}>
-								<FaInstagram />
-							</SocialButton>
-						</Stack> */}
 					</Container>
 				</Box>
 			</Flex>
