@@ -18,7 +18,7 @@ const Introduction = () => {
 			>
 				<Flex flex={1} flexDir="column">
 					<Text
-						fontSize={{ base: "30px", md: "76px" }}
+						fontSize={{ base: "30px", md: "50px", lg: "76px" }}
 						fontWeight={700}
 						lineHeight={"1.132em"}
 						color="#fff"

@@ -39,9 +39,20 @@ interface CardProps {
 
 const Card = ({ writer, description, icon, position }: CardProps) => {
 	return (
-		<Box w={"full"} borderRadius="28px" overflow="hidden" p={5}>
-			<Flex flexDir={"row"} align={"start"} gap={20}>
+		<Box
+			flexDir={{ base: "column", lg: "row" }}
+			w={"full"}
+			borderRadius="28px"
+			overflow="hidden"
+			p={5}
+		>
+			<Flex
+				flexDir={{ base: "column", lg: "row" }}
+				align={"start"}
+				gap={{ base: 2, lg: 20 }}
+			>
 				<Flex
+					mb={{ base: "10px", lg: 0 }}
 					align={"center"}
 					justify={"center"}
 					color={"white"}
@@ -53,26 +64,30 @@ const Card = ({ writer, description, icon, position }: CardProps) => {
 				<Flex
 					flexDirection={"column"}
 					borderRadius={"28px"}
-					padding="28px"
+					padding={{ base: "15px", lg: "28px" }}
 					w={"full"}
 					bgColor="#2d343f"
 				>
 					<Text
 						mb="15px"
 						lineHeight={"1.441em"}
-						fontSize="34px"
+						fontSize={{ base: "18px", lg: "34px" }}
 						fontWeight={700}
 					>
 						{description}
 					</Text>
 
-					<Flex fontWeight={700} fontSize={"24px"} gap={2}>
+					<Flex
+						fontWeight={700}
+						fontSize={{ base: "14px", lg: "24px" }}
+						gap={2}
+					>
 						<Text color="#075fe4">/</Text>
 						<Text>{writer}</Text>
 					</Flex>
 
 					<Flex>
-						<Text color="#c3cad5" fontSize="20px">
+						<Text fontSize={{ base: "14px", lg: "20px" }} color="#c3cad5">
 							{position}
 						</Text>
 					</Flex>
@@ -97,7 +112,7 @@ export default function Carousel() {
 	return (
 		<Box
 			position={"relative"}
-			height={"600px"}
+			height={"auto"}
 			width={"full"}
 			overflow={"hidden"}
 		>
@@ -119,7 +134,11 @@ export default function Carousel() {
 						key={index}
 						writer={"Example " + index}
 						icon={
-							<Avatar h={100} w={100} src="https://bit.ly/broken-link" />
+							<Avatar
+								h={{ base: 50, lg: 100 }}
+								w={{ base: 50, lg: 100 }}
+								src="https://bit.ly/broken-link"
+							/>
 						}
 						description={
 							"“We’ve never had come this far without Henrique’s great attention to detail and care for the final product”"

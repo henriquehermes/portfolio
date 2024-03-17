@@ -37,7 +37,7 @@ const Company = ({
 				borderRadius={"20px"}
 				src={image}
 				height={"auto"}
-				width={"100px"}
+				width={{ base: "70px", md: "100px" }}
 				alt={name}
 			/>
 

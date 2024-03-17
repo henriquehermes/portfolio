@@ -23,8 +23,8 @@ export default function Footer() {
 			id="contact"
 		>
 			<Flex
-				px={{ base: "12px", md: "24px" }}
-				py={{ base: "10px", md: "30px" }}
+				px={{ base: "12px", lg: "24px" }}
+				py={{ base: "10px", lg: "30px" }}
 				mx="auto"
 				maxW={"1200px"}
 				w="full"
@@ -33,7 +33,7 @@ export default function Footer() {
 			>
 				<Flex
 					flexDir={{ base: "column", md: "row" }}
-					mb={{ base: "10px", md: "40px" }}
+					mb={{ base: "10px", lg: "40px" }}
 					maxW={"6xl"}
 					py={4}
 					align={"center"}
@@ -41,9 +41,9 @@ export default function Footer() {
 				>
 					<Image
 						alt="site-logo"
-						width={{ base: 70, md: 150 }}
+						width={{ base: 70, lg: 150 }}
 						borderRadius={"full"}
-						height={{ base: 70, md: 150 }}
+						height={{ base: 70, lg: 150 }}
 						src="/myself.png"
 					/>
 
@@ -56,14 +56,14 @@ export default function Footer() {
 					>
 						<Text
 							fontWeight={700}
-							fontSize={{ base: "18px", md: "38px" }}
+							fontSize={{ base: "18px", lg: "38px" }}
 						>
 							Henrique Hermes
 						</Text>
 						<Text
 							color="#8895aa"
 							fontWeight={700}
-							fontSize={{ base: "16px", md: "24px" }}
+							fontSize={{ base: "16px", lg: "24px" }}
 						>
 							Senior Front End Developer
 						</Text>
@@ -75,7 +75,7 @@ export default function Footer() {
 							align={"center"}
 							mb="15px"
 							fontWeight={700}
-							fontSize={{ base: "18px", md: "38px" }}
+							fontSize={{ base: "18px", lg: "38px" }}
 						>
 							<Text as={"span"}>Get in touch </Text>
 							<FaArrowRight color="#075fe4" />
@@ -84,7 +84,7 @@ export default function Footer() {
 						<Text
 							fontWeight={700}
 							color="#c3cad5"
-							fontSize={{ base: "14px", md: "16px" }}
+							fontSize={{ base: "14px", lg: "16px" }}
 						>
 							Email
 						</Text>
@@ -95,7 +95,7 @@ export default function Footer() {
 									"mailto:henriquehermes97@gmail.com"
 							}}
 							fontWeight={700}
-							fontSize={{ base: "18px", md: "22px" }}
+							fontSize={{ base: "18px", lg: "22px" }}
 							lineHeight={"1.273em"}
 							cursor={"pointer"}
 							_hover={{
@@ -109,7 +109,7 @@ export default function Footer() {
 							mt="15px"
 							fontWeight={700}
 							color="#c3cad5"
-							fontSize={{ base: "14px", md: "16px" }}
+							fontSize={{ base: "14px", lg: "16px" }}
 						>
 							Call me
 						</Text>
@@ -119,7 +119,7 @@ export default function Footer() {
 								window.location.href = "tel:+61424155244"
 							}}
 							fontWeight={700}
-							fontSize={{ base: "18px", md: "22px" }}
+							fontSize={{ base: "18px", lg: "22px" }}
 							lineHeight={"1.273em"}
 							cursor={"pointer"}
 							_hover={{
@@ -136,12 +136,12 @@ export default function Footer() {
 						as={Stack}
 						maxW={"6xl"}
 						py={4}
-						direction={{ base: "column", md: "row" }}
+						direction={{ base: "column", lg: "row" }}
 						spacing={4}
-						justify={{ base: "center", md: "space-between" }}
-						align={{ base: "center", md: "center" }}
+						justify={{ base: "center", lg: "space-between" }}
+						align={{ base: "center", lg: "center" }}
 					>
-						<Text fontSize={{ base: "14px", md: "16px" }}>
+						<Text fontSize={{ base: "14px", lg: "16px" }}>
 							© 2024 Henrique Hermes Portfolio. All rights reserved
 						</Text>
 					</Container>

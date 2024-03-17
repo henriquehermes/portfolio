@@ -25,13 +25,13 @@ const AboutMe = () => {
 					<Flex flex={1} flexDir="column">
 						<Text
 							lineHeight="1.231em"
-							fontSize={{ base: "20px", md: "52px" }}
+							fontSize={{ base: "20px", md: "35px", lg: "52px" }}
 							fontWeight={"700"}
 						>
 							I’ve been developing Front End applications since 2018
 						</Text>
 						<Text
-							fontSize={{ base: "15px", md: "22px" }}
+							fontSize={{ base: "15px", md: "20px", lg: "22px" }}
 							mt="10px"
 							color="#c3cad5"
 						>
@@ -66,7 +66,7 @@ const AboutMe = () => {
 							<br />5 Successful projects
 						</Text>
 						<Text
-							fontSize={{ base: "15px", md: "22px" }}
+							fontSize={{ base: "15px", md: "20px", lg: "22px" }}
 							mt="10px"
 							color="#c3cad5"
 						>
