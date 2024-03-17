@@ -5,13 +5,12 @@ import Container from "../Layout/Container"
 import { FaLinkedinIn } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
 import { IoDocumentText } from "react-icons/io5"
-import Typewriter from "typewriter-effect"
 
 const Introduction = () => {
 	return (
-		<Container pb="0px" minH={"100vh"}>
+		<Container pb="0px" minH={"100dvh"}>
 			<Flex
-				paddingTop={{ base: "30px", md: "100px" }}
+				paddingTop={{ base: "30px", lg: "100px" }}
 				gridColumnGap="108px"
 				gridRowGap="80px"
 				color="#c3cad5"
@@ -25,19 +24,8 @@ const Introduction = () => {
 						color="#fff"
 						marginBottom="12px"
 					>
-						<Typewriter
-							options={{
-								autoStart: true,
-								delay: 100,
-							}}
-							onInit={(typewriter) => {
-								typewriter
-									.typeString(
-										"I’m Henrique, a<br />Senior Front End Developer"
-									)
-									.start()
-							}}
-						/>
+						I’m Henrique, a<br />
+						Senior Front End Developer
 					</Text>
 
 					<Text lineHeight="1.667em" fontSize="18px">

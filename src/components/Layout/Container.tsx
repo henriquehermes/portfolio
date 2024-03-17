@@ -8,8 +8,8 @@ interface Props extends FlexProps {
 const Container = ({ children, ...props }: Props) => {
 	return (
 		<Flex
-			px="24px"
-			pb="50px"
+			px={{ base: "12px", md: "24px" }}
+			pb={{ base: "20px", md: "50px" }}
 			mx="auto"
 			maxW={"1200px"}
 			w="full"

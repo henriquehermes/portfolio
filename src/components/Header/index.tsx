@@ -19,7 +19,7 @@ const Header = () => {
 						>{`Henrique Hermes`}</Text>
 					</Flex>
 
-					<Flex display={{ base: "none", md: "flex" }} gap={10}>
+					<Flex display={{ base: "none", lg: "flex" }} gap={10}>
 						<Button
 							variant="unstyled"
 							onClick={() => {

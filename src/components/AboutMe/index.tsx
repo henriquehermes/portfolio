@@ -4,23 +4,37 @@ import Container from "../Layout/Container"
 const AboutMe = () => {
 	return (
 		<Container>
-			<Flex id="about" color="#fff" flexDir={"column"}>
+			<Flex
+				mt={{ base: 0, md: "50px", lg: 0 }}
+				id="about"
+				color="#fff"
+				flexDir={"column"}
+			>
 				<Flex gap={15} fontWeight="700" fontSize={"20px"}>
 					<Text color="#075fe4">/</Text>
 					<Text>ABOUT ME</Text>
 				</Flex>
 
 				<Flex
+					flexDir={{ base: "column", lg: "row" }}
 					gridColumnGap="108px"
-					gridRowGap="80px"
+					gridRowGap={{ base: "20px", md: "80px" }}
 					justify={"space-between"}
 					mt="20px"
 				>
 					<Flex flex={1} flexDir="column">
-						<Text lineHeight="1.231em" fontSize="52px" fontWeight={"700"}>
+						<Text
+							lineHeight="1.231em"
+							fontSize={{ base: "20px", md: "52px" }}
+							fontWeight={"700"}
+						>
 							I’ve been developing Front End applications since 2018
 						</Text>
-						<Text mt="10px" color="#c3cad5">
+						<Text
+							fontSize={{ base: "15px", md: "22px" }}
+							mt="10px"
+							color="#c3cad5"
+						>
 							I am a Senior Frontend Developer, a leading company in the
 							field of web and mobile development, where I collaborate
 							closely with cross-functional teams to deliver scalable and
@@ -45,13 +59,17 @@ const AboutMe = () => {
 						<Text
 							mt="10px"
 							lineHeight="1.231em"
-							fontSize="32px"
+							fontSize={{ base: "20px", md: "32px" }}
 							fontWeight={"700"}
 						>
 							6 Years of experience
 							<br />5 Successful projects
 						</Text>
-						<Text mt="10px" color="#c3cad5">
+						<Text
+							fontSize={{ base: "15px", md: "22px" }}
+							mt="10px"
+							color="#c3cad5"
+						>
 							With a rich portfolio spanning finance, electrical
 							vehicles, banking, and e-commerce, my projects stand as a
 							testament to versatility and expertise. From pioneering

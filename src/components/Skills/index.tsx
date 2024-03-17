@@ -37,7 +37,8 @@ interface CardProps {
 const Card = ({ heading, description, icon }: CardProps) => {
 	return (
 		<Box
-			maxW={{ base: "full", md: "275px" }}
+			m={{ base: "10px", md: 0 }}
+			maxW={{ base: "auto", md: "275px" }}
 			w={"full"}
 			borderRadius="28px"
 			overflow="hidden"
@@ -78,7 +79,12 @@ const Card = ({ heading, description, icon }: CardProps) => {
 const Skills = () => {
 	return (
 		<Container backgroundColor="transparent">
-			<Flex id="skills" color="#fff" mt="100px" flexDir={"column"}>
+			<Flex
+				id="skills"
+				color="#fff"
+				mt={{ base: "10px", md: "100px" }}
+				flexDir={"column"}
+			>
 				<Flex gap={15} fontWeight="700" fontSize={"20px"}>
 					<Text color="#075fe4">/</Text>
 					<Text>MY SKILLS</Text>

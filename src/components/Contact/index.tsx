@@ -15,8 +15,36 @@ import { BsPerson } from "react-icons/bs"
 import { MdOutlineEmail } from "react-icons/md"
 import Container from "../Layout/Container"
 import { FaArrowRight } from "react-icons/fa"
+import { useForm } from "react-hook-form"
+
+export type FormData = {
+	name: string
+	email: string
+	message: string
+}
 
 export default function Contact() {
+	const apiEndpoint = "/api/email"
+
+	const { register, handleSubmit } = useForm<FormData>()
+
+	async function onSubmit(data: FormData) {
+		await fetch(apiEndpoint, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(data),
+		})
+			.then((res) => res.json())
+			.then(() => {
+				alert("Success! Your message has been sent!")
+			})
+			.catch((err) => {
+				console.log(err)
+			})
+	}
+
 	return (
 		<Flex
 			id="contact"
@@ -53,51 +81,59 @@ export default function Contact() {
 						</Text>
 					</Flex>
 
-					<Flex gap={5} flex={1} flexDir="column">
-						<FormControl isRequired>
-							<FormLabel>Name</FormLabel>
+					<Flex w="full" gap={5} flex={1} flexDir="column">
+						<form onSubmit={handleSubmit(onSubmit)}>
+							<FormControl isRequired>
+								<FormLabel>Name</FormLabel>
 
-							<InputGroup>
-								<InputLeftElement>
-									<BsPerson />
-								</InputLeftElement>
-								<Input
-									type="text"
-									name="name"
-									placeholder="Your Name"
+								<InputGroup>
+									<InputLeftElement>
+										<BsPerson />
+									</InputLeftElement>
+									<Input
+										type="text"
+										placeholder="Your Name"
+										{...register("name", { required: true })}
+									/>
+								</InputGroup>
+							</FormControl>
+
+							<FormControl isRequired>
+								<FormLabel>Email</FormLabel>
+
+								<InputGroup>
+									<InputLeftElement>
+										<MdOutlineEmail />
+									</InputLeftElement>
+									<Input
+										type="email"
+										placeholder="Your Email"
+										{...register("email", { required: true })}
+									/>
+								</InputGroup>
+							</FormControl>
+
+							<FormControl isRequired>
+								<FormLabel>Message</FormLabel>
+
+								<Textarea
+									placeholder="Your Message"
+									rows={6}
+									resize="none"
+									{...register("message", { required: true })}
 								/>
-							</InputGroup>
-						</FormControl>
+							</FormControl>
 
-						<FormControl isRequired>
-							<FormLabel>Email</FormLabel>
-
-							<InputGroup>
-								<InputLeftElement>
-									<MdOutlineEmail />
-								</InputLeftElement>
-								<Input
-									type="email"
-									name="email"
-									placeholder="Your Email"
-								/>
-							</InputGroup>
-						</FormControl>
-
-						<FormControl isRequired>
-							<FormLabel>Message</FormLabel>
-
-							<Textarea
-								name="message"
-								placeholder="Your Message"
-								rows={6}
-								resize="none"
-							/>
-						</FormControl>
-
-						<Button mt="15px" bg="#075fe4" color="white" width="full">
-							Send Message
-						</Button>
+							<Button
+								type="submit"
+								mt="15px"
+								bg="#075fe4"
+								color="white"
+								width="full"
+							>
+								Send Message
+							</Button>
+						</form>
 					</Flex>
 				</Flex>
 			</Container>

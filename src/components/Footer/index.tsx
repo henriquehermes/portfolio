@@ -2,15 +2,13 @@
 
 import {
 	Box,
-	chakra,
+	Image,
 	Container,
 	Flex,
 	Stack,
 	Text,
 	useColorModeValue,
-	VisuallyHidden,
 } from "@chakra-ui/react"
-import { Image } from "@chakra-ui/next-js"
 import { FaArrowRight } from "react-icons/fa"
 
 export default function Footer() {
@@ -22,47 +20,72 @@ export default function Footer() {
 			bgColor="#1b1f24"
 			w={"full"}
 			color={"#fff"}
+			id="contact"
 		>
 			<Flex
-				px="24px"
-				py="30px"
+				px={{ base: "12px", md: "24px" }}
+				py={{ base: "10px", md: "30px" }}
 				mx="auto"
 				maxW={"1200px"}
 				w="full"
 				height="full"
 				flexDir="column"
 			>
-				<Flex mb="40px" maxW={"6xl"} py={4} align={"center"}>
+				<Flex
+					flexDir={{ base: "column", md: "row" }}
+					mb={{ base: "10px", md: "40px" }}
+					maxW={"6xl"}
+					py={4}
+					align={"center"}
+					justify={{ base: "center", md: "flex-start" }}
+				>
 					<Image
 						alt="site-logo"
-						width={150}
+						width={{ base: 70, md: 150 }}
 						borderRadius={"full"}
-						height={150}
+						height={{ base: 70, md: 150 }}
 						src="/myself.png"
 					/>
 
-					<Flex flex={1} flexDir={"column"} ml="25px">
-						<Text fontWeight={700} fontSize={"38px"}>
+					<Flex
+						mt={{ base: "10px", md: 0 }}
+						textAlign={{ base: "center", md: "left" }}
+						flex={1}
+						flexDir={"column"}
+						ml={{ base: 0, md: "25px" }}
+					>
+						<Text
+							fontWeight={700}
+							fontSize={{ base: "18px", md: "38px" }}
+						>
 							Henrique Hermes
 						</Text>
-						<Text color="#8895aa" fontWeight={700} fontSize={"24px"}>
+						<Text
+							color="#8895aa"
+							fontWeight={700}
+							fontSize={{ base: "16px", md: "24px" }}
+						>
 							Senior Front End Developer
 						</Text>
 					</Flex>
 
-					<Flex flex={1} flexDir={"column"}>
+					<Flex mt={{ base: "15px", md: 0 }} flex={1} flexDir={"column"}>
 						<Flex
 							gap={2}
 							align={"center"}
 							mb="15px"
 							fontWeight={700}
-							fontSize={"38px"}
+							fontSize={{ base: "18px", md: "38px" }}
 						>
 							<Text as={"span"}>Get in touch </Text>
 							<FaArrowRight color="#075fe4" />
 						</Flex>
 
-						<Text fontWeight={700} color="#c3cad5" fontSize={"16px"}>
+						<Text
+							fontWeight={700}
+							color="#c3cad5"
+							fontSize={{ base: "14px", md: "16px" }}
+						>
 							Email
 						</Text>
 
@@ -72,7 +95,7 @@ export default function Footer() {
 									"mailto:henriquehermes97@gmail.com"
 							}}
 							fontWeight={700}
-							fontSize={"22px"}
+							fontSize={{ base: "18px", md: "22px" }}
 							lineHeight={"1.273em"}
 							cursor={"pointer"}
 							_hover={{
@@ -86,7 +109,7 @@ export default function Footer() {
 							mt="15px"
 							fontWeight={700}
 							color="#c3cad5"
-							fontSize={"16px"}
+							fontSize={{ base: "14px", md: "16px" }}
 						>
 							Call me
 						</Text>
@@ -96,7 +119,7 @@ export default function Footer() {
 								window.location.href = "tel:+61424155244"
 							}}
 							fontWeight={700}
-							fontSize={"22px"}
+							fontSize={{ base: "18px", md: "22px" }}
 							lineHeight={"1.273em"}
 							cursor={"pointer"}
 							_hover={{
@@ -108,11 +131,7 @@ export default function Footer() {
 					</Flex>
 				</Flex>
 
-				<Box
-					borderTopWidth={1}
-					borderStyle={"solid"}
-					borderColor={useColorModeValue("gray.200", "gray.700")}
-				>
+				<Box borderTopWidth={1} borderStyle={"solid"}>
 					<Container
 						as={Stack}
 						maxW={"6xl"}
@@ -122,7 +141,7 @@ export default function Footer() {
 						justify={{ base: "center", md: "space-between" }}
 						align={{ base: "center", md: "center" }}
 					>
-						<Text>
+						<Text fontSize={{ base: "14px", md: "16px" }}>
 							© 2024 Henrique Hermes Portfolio. All rights reserved
 						</Text>
 					</Container>

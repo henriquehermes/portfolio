@@ -53,16 +53,27 @@ const Company = ({
 const WorkedOn = () => {
 	return (
 		<Container>
-			<Flex color="#fff" mt="150px" flexDir={"column"}>
+			<Flex
+				color="#fff"
+				mt={{ base: "80px", md: "150px" }}
+				flexDir={"column"}
+			>
 				<Divider />
 
-				<Flex flexDir={"column"} my="88px">
+				<Flex flexDir={"column"} my={{ base: "30px", md: "88px" }}>
 					<Flex gap={15} fontWeight="700" fontSize={"20px"}>
 						<Text color="#075fe4">/</Text>
 						<Text>PREVIOUSLY WORKED ON</Text>
 					</Flex>
 
-					<Flex mt="50px" w="full" justify={"space-evenly"} gap={5}>
+					<Flex
+						flexDir={"row"}
+						mt="50px"
+						w="full"
+						flexWrap={"wrap"}
+						justify={"space-evenly"}
+						gap={{ base: 2, md: 5 }}
+					>
 						<Company
 							image="/wevolt.jpeg"
 							name="Wevolt"
