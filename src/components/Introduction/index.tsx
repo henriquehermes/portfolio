@@ -5,6 +5,7 @@ import Container from "../Layout/Container"
 import { FaLinkedinIn } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
 import { IoDocumentText } from "react-icons/io5"
+import Typewriter from "typewriter-effect"
 
 const Introduction = () => {
 	return (
@@ -17,16 +18,28 @@ const Introduction = () => {
 				flexDir={{ base: "column", md: "row" }}
 			>
 				<Flex flex={1} flexDir="column">
-					<Text
+					<Flex
 						fontSize={{ base: "30px", md: "50px", lg: "76px" }}
 						fontWeight={700}
 						lineHeight={"1.132em"}
 						color="#fff"
 						marginBottom="12px"
 					>
-						I’m Henrique, a<br />
-						Senior Front End Developer
-					</Text>
+						<Typewriter
+							options={{
+								autoStart: true,
+								delay: 75,
+							}}
+							onInit={(typewriter) => {
+								typewriter
+									.typeString(
+										"I’m Henrique, a<br />Senior Front End Developer"
+									)
+									.pauseFor(2500)
+									.start()
+							}}
+						/>
+					</Flex>
 
 					<Text lineHeight="1.667em" fontSize="18px">
 						ReactJS and React Native Engineer
