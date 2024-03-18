@@ -121,6 +121,13 @@ export default function Carousel() {
 			message:
 				"I am immensely grateful to have had Henrique as my mentor. His guidance and support were essential to my growth as a frontend developer. He demonstrates deep technical knowledge and a remarkable ability to solve complex problems. He was always available to offer guidance and support, helping me enhance my skills. It was a pleasure working with you at Wevolt. Thank you, my friend.",
 		},
+		{
+			name: "Olavio Lacerda 🚀",
+			photo: "/webp/olavio.webp",
+			linkedin: "https://www.linkedin.com/in/olaviolacerda",
+			message:
+				"I had the pleasure of working closely with Henrique for approximately two years, and I can confidently say he is an outstanding colleague and a highly skilled developer. Henrique's focus and dedication to his work are truly commendable, and his expertise in React.js is exemplary. He consistently delivers high-quality results and demonstrates a deep understanding of complex technical concepts. I highly recommend Henrique for any project or team looking to excel in React.js development.",
+		},
 	]
 
 	return (
