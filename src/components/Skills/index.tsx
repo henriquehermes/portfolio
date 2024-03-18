@@ -4,7 +4,7 @@ import { Box, Flex, Icon, Stack, Text } from "@chakra-ui/react"
 import Container from "../Layout/Container"
 import { ReactElement } from "react"
 import { FaNodeJs, FaReact } from "react-icons/fa"
-import { TbBrandNextjs } from "react-icons/tb"
+import { TbBrandAzure, TbBrandNextjs } from "react-icons/tb"
 import { IoLogoJavascript } from "react-icons/io"
 import {
 	SiAdobexd,
@@ -238,6 +238,12 @@ const Skills = () => {
 						heading={"AWS"}
 						icon={<Icon as={SiAmazonaws} w={10} h={10} />}
 						description={"1 year of experience"}
+					/>
+
+					<Card
+						heading={"Azure"}
+						icon={<Icon as={TbBrandAzure} w={10} h={10} />}
+						description={"2 year of experience"}
 					/>
 				</Flex>
 			</Flex>
