@@ -7,6 +7,7 @@ import {
 	Flex,
 	Icon,
 	IconButton,
+	Image,
 	Stack,
 	Text,
 	useBreakpointValue,
@@ -31,13 +32,13 @@ const settings = {
 }
 
 interface CardProps {
-	writer: string
-	description: string
-	icon: ReactElement
-	position: string
+	name: string
+	linkedin: string
+	photo: string
+	message: string
 }
 
-const Card = ({ writer, description, icon, position }: CardProps) => {
+const Card = ({ name, linkedin, photo, message }: CardProps) => {
 	return (
 		<Box
 			flexDir={{ base: "column", lg: "row" }}
@@ -51,16 +52,15 @@ const Card = ({ writer, description, icon, position }: CardProps) => {
 				align={"start"}
 				gap={{ base: 2, lg: 20 }}
 			>
-				<Flex
+				<Image
+					src={photo}
+					alt={name}
+					w={{ base: "60px", md: "100px" }}
+					height={{ base: "60px", md: "100px" }}
 					mb={{ base: "10px", lg: 0 }}
-					align={"center"}
-					justify={"center"}
-					color={"white"}
 					rounded={"full"}
 					bgColor="#075FE4"
-				>
-					{icon}
-				</Flex>
+				/>
 				<Flex
 					flexDirection={"column"}
 					borderRadius={"28px"}
@@ -71,10 +71,10 @@ const Card = ({ writer, description, icon, position }: CardProps) => {
 					<Text
 						mb="15px"
 						lineHeight={"1.441em"}
-						fontSize={{ base: "18px", lg: "34px" }}
+						fontSize={{ base: "18px", lg: "20px" }}
 						fontWeight={700}
 					>
-						{description}
+						{message}
 					</Text>
 
 					<Flex
@@ -83,12 +83,17 @@ const Card = ({ writer, description, icon, position }: CardProps) => {
 						gap={2}
 					>
 						<Text color="#075fe4">/</Text>
-						<Text>{writer}</Text>
+						<Text>{name}</Text>
 					</Flex>
 
 					<Flex>
-						<Text fontSize={{ base: "14px", lg: "20px" }} color="#c3cad5">
-							{position}
+						<Text
+							as={"a"}
+							href={linkedin}
+							fontSize={{ base: "14px", lg: "16px" }}
+							color="#c3cad5"
+						>
+							{linkedin}
 						</Text>
 					</Flex>
 				</Flex>
@@ -107,7 +112,16 @@ export default function Carousel() {
 	const top = useBreakpointValue({ base: "90%", md: "55%" })
 
 	// These are the images used in the slide
-	const cards = [1, 2, 3, 4]
+	const testimonials = [
+		{
+			name: "Diego Pereira dos Santos",
+			photo: "/webp/diego.webp",
+			linkedin:
+				"https://www.linkedin.com/in/diego-pereira-dos-santos-b7790218a",
+			message:
+				"I am immensely grateful to have had Henrique as my mentor. His guidance and support were essential to my growth as a frontend developer. He demonstrates deep technical knowledge and a remarkable ability to solve complex problems. He was always available to offer guidance and support, helping me enhance my skills. It was a pleasure working with you at Wevolt. Thank you, my friend.",
+		},
+	]
 
 	return (
 		<Box
@@ -129,21 +143,13 @@ export default function Carousel() {
 			/>
 			{/* Slider */}
 			<Slider {...settings} ref={(slider) => setSlider(slider)}>
-				{cards.map((user, index) => (
+				{testimonials.map((user, index) => (
 					<Card
 						key={index}
-						writer={"Example " + index}
-						icon={
-							<Avatar
-								h={{ base: 50, lg: 100 }}
-								w={{ base: 50, lg: 100 }}
-								src="https://bit.ly/broken-link"
-							/>
-						}
-						description={
-							"“We’ve never had come this far without Henrique’s great attention to detail and care for the final product”"
-						}
-						position="Manager"
+						name={user.name}
+						photo={user.photo}
+						message={user.message}
+						linkedin={user.linkedin}
 					/>
 				))}
 			</Slider>
