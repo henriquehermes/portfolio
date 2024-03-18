@@ -35,9 +35,9 @@ const AboutMe = () => {
 							mt="10px"
 							color="#c3cad5"
 						>
-							I am a Senior Frontend Developer, a leading company in the
-							field of web and mobile development, where I collaborate
-							closely with cross-functional teams to deliver scalable and
+							I am a Senior Frontend Developer, a leading in the field of
+							web and mobile development, where I collaborate closely
+							with cross-functional teams to deliver scalable and
 							performant applications that meet the unique demands of
 							each project. With over six years of professional
 							experience, I have developed a strong expertise in ReactJS
