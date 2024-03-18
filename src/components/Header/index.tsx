@@ -92,7 +92,7 @@ const Header = () => {
 								<MenuItem
 									onClick={() => {
 										window.open(
-											"https://drive.google.com/file/d/1G5uPxvGYrfrClmnWqMQ-e4m5_zi0Xkbq/view"
+											"https://drive.google.com/file/d/1hAYU0QfgqUs1XX2t-3n9-XBuQg_LqcSd/view?usp=sharing"
 										)
 									}}
 								>
@@ -123,7 +123,7 @@ const Header = () => {
 								variant="unstyled"
 								onClick={() => {
 									window.open(
-										"https://drive.google.com/file/d/1G5uPxvGYrfrClmnWqMQ-e4m5_zi0Xkbq/view"
+										"https://drive.google.com/file/d/1hAYU0QfgqUs1XX2t-3n9-XBuQg_LqcSd/view?usp=sharing"
 									)
 								}}
 								_hover={{
