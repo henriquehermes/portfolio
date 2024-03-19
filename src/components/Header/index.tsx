@@ -65,7 +65,7 @@ const Header = () => {
 				pb="0"
 			>
 				<Flex paddingY="14px" w="full" justifyContent="space-between">
-					<Flex width={"full"} align={"center"} gap="10px">
+					<Flex as="a" href="/" width={"full"} align={"center"} gap="10px">
 						<Image src="/site-logo.svg" alt="site-logo" />
 						<Text
 							color="white"

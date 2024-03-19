@@ -1,6 +1,6 @@
-import { Divider, Flex, Text } from "@chakra-ui/react"
+import { Flex, Text } from "@chakra-ui/react"
 import Container from "../Layout/Container"
-import Carousel from "./Carousel"
+import Items from "./Items"
 
 const Portfolio = () => {
 	return (
@@ -17,10 +17,12 @@ const Portfolio = () => {
 						fontSize={{ base: "20px", md: "35px", lg: "52px" }}
 						fontWeight={"700"}
 					>
-						Take a look at the latest projects I’ve done
+						Take a look at
+						<br />
+						the latest projects I’ve done
 					</Text>
 
-					<Carousel />
+					<Items />
 				</Flex>
 			</Flex>
 		</Container>

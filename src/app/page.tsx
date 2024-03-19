@@ -43,9 +43,9 @@ export default function Home() {
 			<Flex flexDir={"column"}>
 				<Introduction />
 				<AboutMe />
-				<WorkedOn />
-				<Skills />
 				<Portfolio />
+				<Skills />
+				<WorkedOn />
 				<Testimonials />
 
 				<Fade in={isVisible}>

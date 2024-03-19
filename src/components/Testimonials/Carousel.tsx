@@ -114,6 +114,13 @@ export default function Carousel() {
 	// These are the images used in the slide
 	const testimonials = [
 		{
+			name: "Ygor Fraga",
+			photo: "/webp/ygor.webp",
+			linkedin: "https://www.linkedin.com/in/ygordefraga/",
+			message:
+				"During my tenure at 4all, I had the privilege of collaborating closely with Henrique, whose proactive nature and extensive tech expertise left a profound impact. Henrique excels in front-end development, demonstrating exceptional proficiency particularly in React, while showcasing a deep understanding of various other technologies. His proactive approach and depth of knowledge make him an invaluable asset to any project, consistently delivering high-quality results.",
+		},
+		{
 			name: "Diego Pereira dos Santos",
 			photo: "/webp/diego.webp",
 			linkedin:
