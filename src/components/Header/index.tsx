@@ -17,6 +17,7 @@ import {
 import Container from "../Layout/Container"
 import { PiHamburger } from "react-icons/pi"
 import { useEffect, useState } from "react"
+import Link from "next/link"
 
 const Header = () => {
 	const [isVisible, setIsVisible] = useState(false)
@@ -65,14 +66,16 @@ const Header = () => {
 				pb="0"
 			>
 				<Flex paddingY="14px" w="full" justifyContent="space-between">
-					<Flex as="a" href="/" width={"full"} align={"center"} gap="10px">
-						<Image src="/site-logo.svg" alt="site-logo" />
-						<Text
-							color="white"
-							fontWeight="bold"
-							fontSize={{ base: "20px", md: "28px" }}
-						>{`Henrique Hermes`}</Text>
-					</Flex>
+					<Link href="/">
+						<Flex width={"full"} align={"center"} gap="10px">
+							<Image src="/site-logo.svg" alt="site-logo" />
+							<Text
+								color="white"
+								fontWeight="bold"
+								fontSize={{ base: "20px", md: "28px" }}
+							>{`Henrique Hermes`}</Text>
+						</Flex>
+					</Link>
 
 					{!isLargerThan900 ? (
 						<Menu>
@@ -99,20 +102,20 @@ const Header = () => {
 									Resume
 								</MenuItem>
 
-								<MenuItem as="a" href="#about">
-									About
+								<MenuItem>
+									<Link href={"/#about"}>About</Link>
 								</MenuItem>
 
-								<MenuItem as="a" href="#skills">
-									My Skills
+								<MenuItem>
+									<Link href={"/#skills"}>My Skills</Link>
 								</MenuItem>
 
-								<MenuItem as="a" href="#portfolio">
-									My Portfolio
+								<MenuItem>
+									<Link href={"/#portfolio"}>My Portfolio</Link>
 								</MenuItem>
 
-								<MenuItem as="a" href="#contact">
-									Contact
+								<MenuItem>
+									<Link href={"#contact"}>Contact</Link>
 								</MenuItem>
 							</MenuList>
 						</Menu>
@@ -142,65 +145,65 @@ const Header = () => {
 								</Text>
 							</Button>
 
-							<Button
-								_hover={{
-									color: "#075fe4",
-									textDecoration: "underline",
-								}}
-								display="flex"
-								as={"a"}
-								href={"#about"}
-								variant="unstyled"
-							>
-								<Text fontSize={"20px"} color="#f0f2f4">
-									About
-								</Text>
-							</Button>
+							<Link href={"/#about"}>
+								<Button
+									_hover={{
+										color: "#075fe4",
+										textDecoration: "underline",
+									}}
+									display="flex"
+									variant="unstyled"
+								>
+									<Text fontSize={"20px"} color="#f0f2f4">
+										About
+									</Text>
+								</Button>
+							</Link>
 
-							<Button
-								_hover={{
-									color: "#075fe4",
-									textDecoration: "underline",
-								}}
-								display="flex"
-								as={"a"}
-								href={"#skills"}
-								variant="unstyled"
-							>
-								<Text fontSize={"20px"} color="#f0f2f4">
-									My Skills
-								</Text>
-							</Button>
+							<Link href={"/#skills"}>
+								<Button
+									_hover={{
+										color: "#075fe4",
+										textDecoration: "underline",
+									}}
+									display="flex"
+									variant="unstyled"
+								>
+									<Text fontSize={"20px"} color="#f0f2f4">
+										My Skills
+									</Text>
+								</Button>
+							</Link>
 
-							<Button
-								_hover={{
-									color: "#075fe4",
-									textDecoration: "underline",
-								}}
-								display="flex"
-								as={"a"}
-								href={"#portfolio"}
-								variant="unstyled"
-							>
-								<Text fontSize={"20px"} color="#f0f2f4">
-									My Portfolio
-								</Text>
-							</Button>
+							<Link href={"/#portfolio"}>
+								<Button
+									_hover={{
+										color: "#075fe4",
+										textDecoration: "underline",
+									}}
+									display="flex"
+									variant="unstyled"
+								>
+									<Text fontSize={"20px"} color="#f0f2f4">
+										My Portfolio
+									</Text>
+								</Button>
+							</Link>
 
-							<Button
-								_hover={{
-									color: "#075fe4",
-									textDecoration: "underline",
-								}}
-								display="flex"
-								as={"a"}
-								href={"#contact"}
-								variant="unstyled"
-							>
-								<Text fontSize={"20px"} color="#f0f2f4">
-									Contact
-								</Text>
-							</Button>
+							<Link href={"#contact"}>
+								<Button
+									_hover={{
+										color: "#075fe4",
+										textDecoration: "underline",
+									}}
+									display="flex"
+									variant="unstyled"
+								>
+									<Text fontSize={"20px"} color="#f0f2f4">
+										Contact
+									</Text>
+								</Button>
+							</Link>
 						</Flex>
 					)}
 				</Flex>

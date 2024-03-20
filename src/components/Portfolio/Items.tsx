@@ -12,6 +12,7 @@ import {
 	Text,
 	useBreakpointValue,
 } from "@chakra-ui/react"
+import Link from "next/link"
 
 interface CardProps {
 	company: string
@@ -22,8 +23,6 @@ interface CardProps {
 const Card = ({ company, image1, link }: CardProps) => {
 	return (
 		<Box
-			href={link}
-			as="a"
 			flexDir={{ base: "column", lg: "row" }}
 			maxW={{ base: "full", md: "275px" }}
 			w={"full"}
@@ -38,23 +37,25 @@ const Card = ({ company, image1, link }: CardProps) => {
 				color: "#fff",
 			}}
 		>
-			<Flex flexDir="column" padding={{ base: "15px", lg: "20px" }}>
-				<Text
-					lineHeight={"1.441em"}
-					fontSize={{ base: "18px", lg: "25px" }}
-					fontWeight={700}
-				>
-					{company}
-				</Text>
-			</Flex>
+			<Link href={link}>
+				<Flex flexDir="column" padding={{ base: "15px", lg: "20px" }}>
+					<Text
+						lineHeight={"1.441em"}
+						fontSize={{ base: "18px", lg: "25px" }}
+						fontWeight={700}
+					>
+						{company}
+					</Text>
+				</Flex>
 
-			<Image
-				objectFit={"cover"}
-				h="full"
-				w="full"
-				src={image1}
-				alt="image1"
-			/>
+				<Image
+					objectFit={"cover"}
+					h="full"
+					w="full"
+					src={image1}
+					alt="image1"
+				/>
+			</Link>
 		</Box>
 	)
 }
@@ -74,17 +75,17 @@ export default function Carousel() {
 		{
 			company: "4all",
 			image1: "/webp/4all.webp",
-			link: "https://4all.com",
+			link: "/jobs/4all",
 		},
 		{
 			company: "InfraTI",
 			image1: "/webp/infrati.webp",
-			link: "https://infrati.com.br",
+			link: "/jobs/infrati",
 		},
 		{
 			company: "1App",
 			image1: "/webp/1app.webp",
-			link: "https://www.facebook.com/1appDigital",
+			link: "/jobs/1app",
 		},
 	]
 

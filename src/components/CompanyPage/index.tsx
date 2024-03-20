@@ -24,7 +24,12 @@ export default function CompanyPage({ pageData }: { pageData: PageData }) {
 				<Flex p={8} flex={1} align={"center"} justify={"center"}>
 					<Stack spacing={6} w={"full"} maxW={"lg"}>
 						<Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
-							<Image alt="logo" src={pageData.logo} mb="10px" />
+							<Image
+								maxH="100px"
+								alt="logo"
+								src={pageData.logo}
+								mb="10px"
+							/>
 							<Text color="#fff" as={"span"}>
 								{pageData.company}
 							</Text>
@@ -59,7 +64,12 @@ export default function CompanyPage({ pageData }: { pageData: PageData }) {
 			</Stack>
 
 			<Box color="#fff" p={4}>
-				<Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
+				<Stack
+					spacing={4}
+					as={Container}
+					maxW={{ base: "full", md: "4xl" }}
+					textAlign={"center"}
+				>
 					<Heading fontSize={{ base: "16px", md: "25px" }}>
 						Duties and Responsibilities
 					</Heading>
@@ -68,7 +78,7 @@ export default function CompanyPage({ pageData }: { pageData: PageData }) {
 					</Text>
 				</Stack>
 
-				<Flex w="full" mt={10}>
+				<Flex w="full" mt={"70px"}>
 					<SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
 						{pageData.tasks.map((task) => (
 							<HStack key={task} align={"top"}>
