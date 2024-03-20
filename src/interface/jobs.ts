@@ -10,4 +10,10 @@ export interface PageData {
 	logo: string
 	duration: string
 	client: string
+	reference: {
+		number: string
+		name: string
+		email: string
+	}
+	photos: string[]
 }

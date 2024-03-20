@@ -29,6 +29,12 @@ const pageData: PageData = {
 	logo: "/svg/dolado.svg",
 	client: "Dolado",
 	duration: "2.1 years",
+	reference: {
+		number: "+55 11 96284-1506",
+		name: "Bruno Oliveira",
+		email: "bruno@dolado.com.br",
+	},
+	photos: [],
 }
 
 const Darez = () => {

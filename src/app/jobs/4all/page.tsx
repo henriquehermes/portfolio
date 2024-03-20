@@ -23,6 +23,12 @@ const pageData: PageData = {
 	logo: "/4all-logo.png",
 	client: "DxCO and IRIS",
 	duration: "1.3 years",
+	reference: {
+		number: "+55 51 98402-6518",
+		name: "Rafael Toledo",
+		email: "rafael.toledo@4all.com",
+	},
+	photos: [],
 }
 
 const fourAll = () => {

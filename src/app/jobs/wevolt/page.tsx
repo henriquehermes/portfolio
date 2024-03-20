@@ -30,6 +30,12 @@ const pageData: PageData = {
 	logo: "/webp/wevolt-logo.webp",
 	duration: "1.3 years",
 	client: "Wevolt",
+	reference: {
+		number: "+61 862557901",
+		name: "Jagroop Gill",
+		email: "jagroop@wevolt.com.au",
+	},
+	photos: [],
 }
 
 const Wevolt = () => {

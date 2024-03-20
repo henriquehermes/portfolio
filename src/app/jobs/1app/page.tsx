@@ -32,6 +32,12 @@ const pageData: PageData = {
 	logo: "/1app.png",
 	duration: "1 year",
 	client: "1App Developer",
+	reference: {
+		number: "+55 51 9137-8994 ",
+		name: "Edipaulo Zanella",
+		email: "edipaulo@1app.com.br",
+	},
+	photos: [],
 }
 
 const OneAPP = () => {

@@ -31,7 +31,7 @@ const AboutMe = () => {
 							I’ve been developing Front End applications since 2018
 						</Text>
 						<Text
-							fontSize={{ base: "15px", md: "20px", lg: "22px" }}
+							fontSize={{ base: "15px", lg: "18px" }}
 							mt="10px"
 							color="#c3cad5"
 						>
@@ -66,7 +66,7 @@ const AboutMe = () => {
 							<br />5 Successful projects
 						</Text>
 						<Text
-							fontSize={{ base: "15px", md: "20px", lg: "22px" }}
+							fontSize={{ base: "15px", lg: "18px" }}
 							mt="10px"
 							color="#c3cad5"
 						>

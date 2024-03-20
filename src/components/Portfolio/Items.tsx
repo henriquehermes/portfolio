@@ -90,7 +90,7 @@ export default function Carousel() {
 	]
 
 	return (
-		<Box height={"auto"} width={"full"}>
+		<Flex justify={"center"} align={"center"} height={"auto"} width={"full"}>
 			<Flex
 				mt="40px"
 				maxW={"5xl"}
@@ -107,6 +107,6 @@ export default function Carousel() {
 					/>
 				))}
 			</Flex>
-		</Box>
+		</Flex>
 	)
 }
