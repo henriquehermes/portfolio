@@ -30,6 +30,8 @@ const pageData: PageData = {
 	website: "https://www.linkedin.com/company/1app-developer",
 	image: "/webp/1app.webp",
 	logo: "/1app.png",
+	duration: "1 year",
+	client: "1App Developer",
 }
 
 const OneAPP = () => {

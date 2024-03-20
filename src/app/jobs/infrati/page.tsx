@@ -25,6 +25,8 @@ const pageData: PageData = {
 	website: "https://infrati.com.br/",
 	image: "/webp/infrati.webp",
 	logo: "/infrati-logo.png",
+	client: "InfraTI",
+	duration: "7 months",
 }
 
 const InfraTI = () => {

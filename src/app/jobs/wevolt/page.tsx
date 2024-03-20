@@ -28,6 +28,8 @@ const pageData: PageData = {
 	website: "https://wevolt.com.au/",
 	image: "/webp/wevolt.webp",
 	logo: "/webp/wevolt-logo.webp",
+	duration: "1.3 years",
+	client: "Wevolt",
 }
 
 const Wevolt = () => {

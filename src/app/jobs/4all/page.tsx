@@ -21,6 +21,8 @@ const pageData: PageData = {
 	website: "https://4all.com/",
 	image: "/webp/4all.webp",
 	logo: "/4all-logo.png",
+	client: "DxCO and IRIS",
+	duration: "1.3 years",
 }
 
 const fourAll = () => {

@@ -27,6 +27,8 @@ const pageData: PageData = {
 	website: "https://www.dolado.com.br/",
 	image: "/webp/dolado.webp",
 	logo: "/svg/dolado.svg",
+	client: "Dolado",
+	duration: "2.1 years",
 }
 
 const Darez = () => {

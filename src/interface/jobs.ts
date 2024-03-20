@@ -8,4 +8,6 @@ export interface PageData {
 	image: string
 	website: string
 	logo: string
+	duration: string
+	client: string
 }
