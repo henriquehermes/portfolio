@@ -35,7 +35,15 @@ const pageData: PageData = {
 		name: "Jagroop Gill",
 		email: "jagroop@wevolt.com.au",
 	},
-	photos: [],
+	photos: [
+		"/projects/wevolt/wevolt-1.webp",
+		"/projects/wevolt/wevolt-2.webp",
+		"/projects/wevolt/wevolt-5.jpg",
+		"/projects/wevolt/wevolt-3.webp",
+		"/projects/wevolt/wevolt-4.webp",
+		"/projects/wevolt/wevolt-6.webp",
+		"/projects/wevolt/wevolt-7.webp",
+	],
 }
 
 const Wevolt = () => {

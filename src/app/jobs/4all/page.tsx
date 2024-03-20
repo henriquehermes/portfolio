@@ -28,7 +28,13 @@ const pageData: PageData = {
 		name: "Rafael Toledo",
 		email: "rafael.toledo@4all.com",
 	},
-	photos: [],
+	photos: [
+		"/projects/4all/4all-1.webp",
+		"/projects/4all/4all-2.webp",
+		"/projects/4all/4all-3.webp",
+		"/projects/4all/4all-4.webp",
+		"/projects/4all/4all-5.webp",
+	],
 }
 
 const fourAll = () => {

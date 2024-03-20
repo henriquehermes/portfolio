@@ -32,7 +32,15 @@ const pageData: PageData = {
 		name: "Fernando Nachtigall",
 		email: "Fernando.nachtigall@infrati.com.br",
 	},
-	photos: [],
+	photos: [
+		"/projects/infrati/infrati-1.webp",
+		"/projects/infrati/infrati-4.webp",
+		"/projects/infrati/infrati-5.webp",
+		"/projects/infrati/infrati-7.webp",
+		"/projects/infrati/infrati-3.webp",
+		"/projects/infrati/infrati-6.webp",
+		"/projects/infrati/infrati-2.webp",
+	],
 }
 
 const InfraTI = () => {

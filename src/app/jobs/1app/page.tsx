@@ -37,7 +37,14 @@ const pageData: PageData = {
 		name: "Edipaulo Zanella",
 		email: "edipaulo@1app.com.br",
 	},
-	photos: [],
+	photos: [
+		"/projects/1app/1app-3.webp",
+		"/projects/1app/1app-1.webp",
+		"/projects/1app/1app-4.webp",
+		"/projects/1app/1app-2.webp",
+		"/projects/1app/1app-5.webp",
+		"/projects/1app/1app-6.webp",
+	],
 }
 
 const OneAPP = () => {
