@@ -9,7 +9,7 @@ import Typewriter from "typewriter-effect"
 
 const Introduction = () => {
 	return (
-		<Container mt="100px" pb="0px" minH={"100dvh"}>
+		<Container justify={"center"} mt="70px" pb="0px" minH={"94dvh"}>
 			<Flex
 				paddingTop={{ base: "30px", lg: "100px" }}
 				gridColumnGap="108px"
