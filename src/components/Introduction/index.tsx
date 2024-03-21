@@ -57,7 +57,7 @@ const Introduction = () => {
 								fontWeight="bold"
 								onClick={() => {
 									window.open(
-										"https://drive.google.com/file/d/1hAYU0QfgqUs1XX2t-3n9-XBuQg_LqcSd/view?usp=sharing"
+										"https://drive.google.com/file/d/1KfF_KuTPhx9Qx05nRiSQGqXqGTwIQzTi/view?usp=sharing"
 									)
 								}}
 							>
