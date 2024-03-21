@@ -143,6 +143,13 @@ export default function Carousel() {
 				
 				I highly recommend Henrique for any project or team looking to excel in React.js development.`,
 		},
+        {
+			name: "Luke Gelmi",
+			photo: "/webp/luke.webp",
+			linkedin: "https://www.linkedin.com/in/luke-gelmi",
+			message:
+				"Henrique was a joy to work with. He's always dedicated, keen to learn and diligent in his work. I can recommend Henrique to any team who wants to build a banging mobile app!",
+		},
 	]
 
 	return (

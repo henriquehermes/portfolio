@@ -36,7 +36,7 @@ const AboutMe = () => {
 							mt="10px"
 							color="#c3cad5"
 						>
-							I am a Senior Frontend Developer, a leading in the field of
+							I am a Senior Frontend Developer, a leader in the field of
 							web and mobile development, where I collaborate closely
 							with cross-functional teams to deliver scalable and
 							performant applications that meet the unique demands of
@@ -46,9 +46,9 @@ const AboutMe = () => {
 							such as TypeScript, GraphQL, NextJS, and Storybook.
 							<br /> <br />
 							My passion for technology drives me to constantly learn new
-							skills and explore innovative solutions that can enhance
-							the user experience and satisfaction. I am also committed
-							to following the best practices of software development,
+							skills and explore innovative solutions so that I can enhance
+							user experience and satisfaction. I am also committed
+							to following best practices of software development,
 							such as Agile principles, documentation, testing, and code
 							quality. I enjoy working in a dynamic and collaborative
 							environment, where I can contribute to the growth and
@@ -73,7 +73,7 @@ const AboutMe = () => {
 						>
 							With a rich portfolio spanning finance, electrical
 							vehicles, banking, and e-commerce, my projects stand as a
-							testament to versatility and expertise. From pioneering
+							testament to my versatility and expertise. From pioneering
 							apps in financial management to revolutionizing e-commerce
 							platforms, each endeavor reflects meticulous attention to
 							detail and a passion for innovation.
