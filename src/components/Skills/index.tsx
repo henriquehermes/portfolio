@@ -1,7 +1,15 @@
 "use client"
 
-import { Box, Flex, Icon, Stack, Text } from "@chakra-ui/react"
-import { ReactElement } from "react"
+import {
+	Box,
+	Button,
+	Flex,
+	Icon,
+	Stack,
+	Text,
+	useMediaQuery,
+} from "@chakra-ui/react"
+import { ReactElement, useState } from "react"
 import { FaNodeJs, FaReact } from "react-icons/fa"
 import { IoLogoJavascript } from "react-icons/io"
 import {
@@ -35,10 +43,139 @@ interface CardProps {
 	icon: ReactElement
 }
 
+const SkillsList = [
+	{
+		heading: "ReactJS",
+		icon: FaReact,
+		description: "6 years of experience",
+	},
+	{
+		heading: "React Native",
+		icon: FaReact,
+		description: "6 years of experience",
+	},
+	{
+		heading: "Node JS",
+		icon: FaNodeJs,
+		description: "1.5 years of experience",
+	},
+	{
+		heading: "NextJS",
+		icon: TbBrandNextjs,
+		description: "5 years of experience",
+	},
+	{
+		heading: "TypeScript",
+		icon: SiTypescript,
+		description: "6 years of experience",
+	},
+	{
+		heading: "JavaScript",
+		icon: IoLogoJavascript,
+		description: "6 years of experience",
+	},
+	{
+		heading: "Redux",
+		icon: SiRedux,
+		description: "6 years of experience",
+	},
+	{
+		heading: "GraphQL",
+		icon: SiGraphql,
+		description: "5 years of experience",
+	},
+	{
+		heading: "Shopify",
+		icon: SiShopify,
+		description: "2 years of experience",
+	},
+	{
+		heading: "Docker",
+		icon: SiDocker,
+		description: "4 years of experience",
+	},
+	{
+		heading: "Storybook",
+		icon: SiStorybook,
+		description: "5 years of experience",
+	},
+	{
+		heading: "HTML",
+		icon: SiHtml5,
+		description: "6 years of experience",
+	},
+	{
+		heading: "CSS",
+		icon: SiCss3,
+		description: "6 years of experience",
+	},
+	{
+		heading: "Jira",
+		icon: SiJirasoftware,
+		description: "6 years of experience",
+	},
+	{
+		heading: "Bit Bucket",
+		icon: SiBitbucket,
+		description: "6 years of experience",
+	},
+	{
+		heading: "Jest",
+		icon: SiJest,
+		description: "6 years of experience",
+	},
+	{
+		heading: "Testing Library",
+		icon: SiTestinglibrary,
+		description: "4 years of experience",
+	},
+	{
+		heading: "MongoDB",
+		icon: SiMongodb,
+		description: "1.5 years of experience",
+	},
+	{
+		heading: "Postgres",
+		icon: SiPostgresql,
+		description: "1.5 years of experience",
+	},
+	{
+		heading: "Adobe XD",
+		icon: SiAdobexd,
+		description: "6 years of experience",
+	},
+	{
+		heading: "Figma",
+		icon: SiFigma,
+		description: "6 years of experience",
+	},
+	{
+		heading: "i18n",
+		icon: SiI18Next,
+		description: "4 years of experience",
+	},
+	{
+		heading: "Styled Components",
+		icon: SiStyledcomponents,
+		description: "5 years of experience",
+	},
+	{
+		heading: "AWS",
+		icon: SiAmazonaws,
+		description: "1 year of experience",
+	},
+	{
+		heading: "Azure",
+		icon: TbBrandAzure,
+		description: "2 year of experience",
+	},
+]
+
 const Card = ({ heading, description, icon }: CardProps) => {
+	const [isLowerThan768] = useMediaQuery("(max-width: 768px)")
+
 	return (
 		<Box
-			m={{ base: "10px", md: 0 }}
 			maxW={{ base: "auto", md: "275px" }}
 			w={"full"}
 			borderRadius="28px"
@@ -48,7 +185,7 @@ const Card = ({ heading, description, icon }: CardProps) => {
 			transition="all .2s ease-in-out"
 			cursor={"pointer"}
 			_hover={{
-				transform: "scale(1.1)",
+				transform: !isLowerThan768 ? "scale(1.1)" : "",
 				backgroundColor: "#075FE4",
 				color: "#fff",
 			}}
@@ -78,6 +215,9 @@ const Card = ({ heading, description, icon }: CardProps) => {
 	)
 }
 const Skills = () => {
+	const [page, setPage] = useState(3)
+	const [isLowerThan768] = useMediaQuery("(max-width: 768px)")
+
 	return (
 		<Container backgroundColor="transparent">
 			<Flex
@@ -99,153 +239,40 @@ const Skills = () => {
 					gridGap={{ base: 1, md: 2, lg: 4 }}
 					justify="center"
 				>
-					<Card
-						heading={"ReactJS"}
-						icon={<Icon as={FaReact} w={10} h={10} />}
-						description={"6 years of experience"}
-					/>
+					{!isLowerThan768 ? (
+						SkillsList.map((skill) => (
+							<Card
+								key={skill.heading}
+								heading={skill.heading}
+								description={skill.description}
+								icon={<Icon as={skill.icon} w={10} h={10} />}
+							/>
+						))
+					) : (
+						<Flex gap={5} w="full" flexDir={"column"}>
+							{SkillsList.slice(0, page).map((skill) => (
+								<Card
+									key={skill.heading}
+									heading={skill.heading}
+									description={skill.description}
+									icon={<Icon as={skill.icon} w={10} h={10} />}
+								/>
+							))}
 
-					<Card
-						heading={"React Native"}
-						icon={<Icon as={FaReact} w={10} h={10} />}
-						description={"6 years of experience"}
-					/>
-					<Card
-						heading={"Node JS"}
-						icon={<Icon as={FaNodeJs} w={10} h={10} />}
-						description={"1.5 years of experience"}
-					/>
-					<Card
-						heading={"NextJS"}
-						icon={<Icon as={TbBrandNextjs} w={10} h={10} />}
-						description={"5 years of experience"}
-					/>
-
-					<Card
-						heading={"TypeScript"}
-						icon={<Icon as={SiTypescript} w={10} h={10} />}
-						description={"6 years of experience"}
-					/>
-
-					<Card
-						heading={"JavaScript"}
-						icon={<Icon as={IoLogoJavascript} w={10} h={10} />}
-						description={"6 years of experience"}
-					/>
-
-					<Card
-						heading={"Redux"}
-						icon={<Icon as={SiRedux} w={10} h={10} />}
-						description={"6 years of experience"}
-					/>
-
-					<Card
-						heading={"GraphQL"}
-						icon={<Icon as={SiGraphql} w={10} h={10} />}
-						description={"5 years of experience"}
-					/>
-
-					<Card
-						heading={"Shopify"}
-						icon={<Icon as={SiShopify} w={10} h={10} />}
-						description={"2 years of experience"}
-					/>
-
-					<Card
-						heading={"Docker"}
-						icon={<Icon as={SiDocker} w={10} h={10} />}
-						description={"4 years of experience"}
-					/>
-
-					<Card
-						heading={"Storybook"}
-						icon={<Icon as={SiStorybook} w={10} h={10} />}
-						description={"5 years of experience"}
-					/>
-
-					<Card
-						heading={"HTML"}
-						icon={<Icon as={SiHtml5} w={10} h={10} />}
-						description={"6 years of experience"}
-					/>
-
-					<Card
-						heading={"CSS"}
-						icon={<Icon as={SiCss3} w={10} h={10} />}
-						description={"6 years of experience"}
-					/>
-
-					<Card
-						heading={"Jira"}
-						icon={<Icon as={SiJirasoftware} w={10} h={10} />}
-						description={"6 years of experience"}
-					/>
-
-					<Card
-						heading={"Bit Bucket"}
-						icon={<Icon as={SiBitbucket} w={10} h={10} />}
-						description={"6 years of experience"}
-					/>
-
-					<Card
-						heading={"Jest"}
-						icon={<Icon as={SiJest} w={10} h={10} />}
-						description={"6 years of experience"}
-					/>
-
-					<Card
-						heading={"Testing Library"}
-						icon={<Icon as={SiTestinglibrary} w={10} h={10} />}
-						description={"4 years of experience"}
-					/>
-
-					<Card
-						heading={"MongoDB"}
-						icon={<Icon as={SiMongodb} w={10} h={10} />}
-						description={"1.5 years of experience"}
-					/>
-
-					<Card
-						heading={"Postgres"}
-						icon={<Icon as={SiPostgresql} w={10} h={10} />}
-						description={"1.5 years of experience"}
-					/>
-
-					<Card
-						heading={"Adobe XD"}
-						icon={<Icon as={SiAdobexd} w={10} h={10} />}
-						description={"6 years of experience"}
-					/>
-
-					<Card
-						heading={"Figma"}
-						icon={<Icon as={SiFigma} w={10} h={10} />}
-						description={"6 years of experience"}
-					/>
-
-					<Card
-						heading={"i18n"}
-						icon={<Icon as={SiI18Next} w={10} h={10} />}
-						description={"4 years of experience"}
-					/>
-
-					<Card
-						heading={"Styled Components"}
-						icon={<Icon as={SiStyledcomponents} w={10} h={10} />}
-						description={"5 years of experience"}
-					/>
-
-					<Card
-						heading={"AWS"}
-						icon={<Icon as={SiAmazonaws} w={10} h={10} />}
-						description={"1 year of experience"}
-					/>
-
-					<Card
-						heading={"Azure"}
-						icon={<Icon as={TbBrandAzure} w={10} h={10} />}
-						description={"2 year of experience"}
-					/>
+							{page < SkillsList.length && (
+								<Button
+									mt="15px"
+									bgColor="#075fe4"
+									color="#fff"
+									onClick={() => {
+										setPage((prev) => prev + 3)
+									}}
+								>
+									<Text>Show more</Text>
+								</Button>
+							)}
+						</Flex>
+					)}
 				</Flex>
 			</Flex>
 		</Container>

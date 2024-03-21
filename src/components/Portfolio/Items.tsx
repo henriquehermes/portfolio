@@ -1,6 +1,6 @@
 "use client"
 
-import { Box, Flex, Image, Text } from "@chakra-ui/react"
+import { Box, Flex, Image, Text, useMediaQuery } from "@chakra-ui/react"
 import Link from "next/link"
 
 interface CardProps {
@@ -10,10 +10,13 @@ interface CardProps {
 }
 
 const Card = ({ company, image1, link }: CardProps) => {
+	const [isLowerThan768] = useMediaQuery("(max-width: 768px)")
+
 	return (
 		<Box
 			flexDir={{ base: "column", lg: "row" }}
-			maxW={{ base: "full", md: "275px" }}
+			maxW={{ base: "200px", md: "275px" }}
+			maxH={{ base: "200px", md: "auto" }}
 			w={"full"}
 			borderRadius="28px"
 			overflow="hidden"
@@ -21,7 +24,7 @@ const Card = ({ company, image1, link }: CardProps) => {
 			transition="all .2s ease-in-out"
 			cursor={"pointer"}
 			_hover={{
-				transform: "scale(1.1)",
+				transform: !isLowerThan768 ? "scale(1.1)" : "",
 				bgColor: "rgba(7,95,228,0.75)",
 				color: "#fff",
 			}}
@@ -84,7 +87,7 @@ export default function Carousel() {
 				mt="40px"
 				maxW={"5xl"}
 				flexWrap="wrap"
-				gridGap={10}
+				gridGap={{ base: 7, md: 10 }}
 				justify="center"
 			>
 				{jobs.map((job, index) => (
