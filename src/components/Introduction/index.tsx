@@ -83,7 +83,7 @@ const Introduction = () => {
 							MY WORK
 						</Text>
 						<Text>
-							Known for relentless dedication and tireless efforts, my
+							Known for relentless dedication and tireless efforts, I
 							embody the epitome of hard work, consistently surpassing
 							expectations with unwavering commitment and diligence.
 						</Text>

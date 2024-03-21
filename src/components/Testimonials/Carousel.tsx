@@ -135,6 +135,13 @@ export default function Carousel() {
 			message:
 				"I had the pleasure of working closely with Henrique for approximately two years, and I can confidently say he is an outstanding colleague and a highly skilled developer. Henrique's focus and dedication to his work are truly commendable, and his expertise in React.js is exemplary. He consistently delivers high-quality results and demonstrates a deep understanding of complex technical concepts. I highly recommend Henrique for any project or team looking to excel in React.js development.",
 		},
+        {
+			name: "Luke Gelmi",
+			photo: "/webp/luke.webp",
+			linkedin: "https://www.linkedin.com/in/luke-gelmi",
+			message:
+				"Henrique was a joy to work with. He's always dedicated, keen to learn and diligent in his work. I can recommend Henrique to any team who wants to build a banging mobile app!",
+		},
 	]
 
 	return (
