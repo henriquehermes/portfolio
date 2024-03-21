@@ -1,8 +1,9 @@
 "use client"
+
 import { Flex, Text } from "@chakra-ui/react"
 
 import Container from "../Layout/Container"
-import Carousel from "./Carousel"
+import Messages from "./Messages"
 
 const Testimonials = () => {
 	return (
@@ -13,9 +14,7 @@ const Testimonials = () => {
 					<Text>MY TESTIMONIALS</Text>
 				</Flex>
 
-				<Flex mt="30px">
-					<Carousel />
-				</Flex>
+				<Messages />
 			</Flex>
 		</Container>
 	)

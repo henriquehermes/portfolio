@@ -1,6 +1,7 @@
 "use client"
 
 import AboutMe from "@/components/AboutMe"
+import Contact from "@/components/Contact"
 import Introduction from "@/components/Introduction"
 import Portfolio from "@/components/Portfolio"
 import Skills from "@/components/Skills"
@@ -47,6 +48,7 @@ export default function Home() {
 				<Skills />
 				<WorkedOn />
 				<Testimonials />
+				<Contact />
 
 				<Fade in={isVisible}>
 					<IconButton

@@ -25,25 +25,14 @@ export type FormData = {
 }
 
 export default function Contact() {
-	const apiEndpoint = "/api/email"
-
 	const { register, handleSubmit } = useForm<FormData>()
 
 	async function onSubmit(data: FormData) {
-		await fetch(apiEndpoint, {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(data),
-		})
-			.then((res) => res.json())
-			.then(() => {
-				alert("Success! Your message has been sent!")
-			})
-			.catch((err) => {
-				console.log(err)
-			})
+		const subject = encodeURIComponent(`${data.name} - ${data.email}`)
+		const body = encodeURIComponent(data.message.replace(/\n/g, "%0D%0A"))
+		window.location.assign(
+			`mailto:henriquehermes97@gmail.com?subject=${subject}&body=${body}`
+		)
 	}
 
 	return (
@@ -57,85 +46,80 @@ export default function Contact() {
 		>
 			<Container
 				color="#fff"
-				pb="0px"
-				flexDir={"column"}
+				flexDir={{ base: "column", md: "row" }}
 				bg={"transparent"}
-				id="contact"
+				gridColumnGap="108px"
+				gridRowGap={{ base: "30px", md: "50px", lg: "80px" }}
+				w="full"
 				h="full"
+				justify="space-between"
 			>
 				<Flex
-					gridColumnGap="108px"
-					gridRowGap="80px"
-					w="full"
-					justify="space-between"
+					fontSize={{ base: "25px", md: "35px", lg: "52px" }}
+					fontWeight={700}
+					lineHeight={{ base: "1em", md: "1.231em" }}
+					flexDir={"column"}
+					flex={1}
 				>
-					<Flex
-						fontSize={"52px"}
-						fontWeight={700}
-						lineHeight={"1.231em"}
-						flexDir={"column"}
-						flex={1}
-					>
-						<Text>Interested in working together?</Text>
-						<Text mt="10px">
-							Let’s talk <FaArrowRight color="#075fe4" />
-						</Text>
-					</Flex>
+					<Text>Interested in working together?</Text>
+					<Text mt="10px">
+						Let’s talk <FaArrowRight color="#075fe4" />
+					</Text>
+				</Flex>
 
-					<Flex w="full" gap={5} flex={1} flexDir="column">
-						<form onSubmit={handleSubmit(onSubmit)}>
-							<FormControl isRequired>
-								<FormLabel>Name</FormLabel>
+				<Flex w="full" flex={1} flexDir="column">
+					<form onSubmit={handleSubmit(onSubmit)}>
+						<FormControl isRequired>
+							<FormLabel>Name</FormLabel>
 
-								<InputGroup>
-									<InputLeftElement>
-										<BsPerson />
-									</InputLeftElement>
-									<Input
-										type="text"
-										placeholder="Your Name"
-										{...register("name", { required: true })}
-									/>
-								</InputGroup>
-							</FormControl>
-
-							<FormControl isRequired>
-								<FormLabel>Email</FormLabel>
-
-								<InputGroup>
-									<InputLeftElement>
-										<MdOutlineEmail />
-									</InputLeftElement>
-									<Input
-										type="email"
-										placeholder="Your Email"
-										{...register("email", { required: true })}
-									/>
-								</InputGroup>
-							</FormControl>
-
-							<FormControl isRequired>
-								<FormLabel>Message</FormLabel>
-
-								<Textarea
-									placeholder="Your Message"
-									rows={6}
-									resize="none"
-									{...register("message", { required: true })}
+							<InputGroup>
+								<InputLeftElement>
+									<BsPerson />
+								</InputLeftElement>
+								<Input
+									type="text"
+									placeholder="Your Name"
+									{...register("name", { required: true })}
 								/>
-							</FormControl>
+							</InputGroup>
+						</FormControl>
 
-							<Button
-								type="submit"
-								mt="15px"
-								bg="#075fe4"
-								color="white"
-								width="full"
-							>
-								Send Message
-							</Button>
-						</form>
-					</Flex>
+						<FormControl my="15px" isRequired>
+							<FormLabel>Email</FormLabel>
+
+							<InputGroup>
+								<InputLeftElement>
+									<MdOutlineEmail />
+								</InputLeftElement>
+								<Input
+									type="email"
+									placeholder="Your Email"
+									{...register("email", { required: true })}
+								/>
+							</InputGroup>
+						</FormControl>
+
+						<FormControl isRequired>
+							<FormLabel>Message</FormLabel>
+
+							<Textarea
+								placeholder="Your Message"
+								rows={6}
+								resize="none"
+								{...register("message", { required: true })}
+							/>
+						</FormControl>
+
+						<Button
+							type="submit"
+							mt="15px"
+							bg="#075fe4"
+							color="white"
+							width="full"
+						>
+							Send Message
+						</Button>
+					</form>
 				</Flex>
 			</Container>
 		</Flex>

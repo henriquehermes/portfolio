@@ -12,7 +12,6 @@ export default function Footer() {
 			bgColor="#1b1f24"
 			w={"full"}
 			color={"#fff"}
-			id="contact"
 		>
 			<Flex
 				px={{ base: "12px", lg: "24px" }}
