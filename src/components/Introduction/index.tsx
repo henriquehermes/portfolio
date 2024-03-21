@@ -10,7 +10,7 @@ import Container from "../Layout/Container"
 
 const Introduction = () => {
 	return (
-		<Container justify={"center"} mt="70px" pb="0px" minH={"94dvh"}>
+		<Container justify={"center"} mt="70px" pb="0px" minH={"94vh"}>
 			<Flex
 				paddingTop={{ base: "30px", lg: "100px" }}
 				gridColumnGap="108px"
