@@ -13,7 +13,7 @@ const settings = {
 	infinite: true,
 	autoplay: true,
 	speed: 500,
-	autoplaySpeed: 5000,
+	autoplaySpeed: 7000,
 	slidesToShow: 1,
 	slidesToScroll: 1,
 }
@@ -60,6 +60,7 @@ const Card = ({ name, linkedin, photo, message }: CardProps) => {
 						lineHeight={"1.441em"}
 						fontSize={{ base: "18px", lg: "20px" }}
 						fontWeight={700}
+						whiteSpace="pre-line"
 					>
 						{message}
 					</Text>
@@ -100,26 +101,47 @@ export default function Carousel() {
 	// These are the images used in the slide
 	const testimonials = [
 		{
+			name: "Edward Beech",
+			photo: "/webp/edward-beech.webp",
+			linkedin: "https://www.linkedin.com/in/edward-beech-48442a74",
+			message: `I had the pleasure of working as team lead for Henrique at Wevolt, where he was a senior frontend developer (for quite some time, the only senior frontend developer).
+
+			He brings to the table deep knowledge of contemporary web app development and mobile app development and is very experienced with React / NextJS and React Native.
+
+			He communicates well and he works quickly and autonomously, quickly delivering anything from the realisation of a complex design through to complex component logic.
+
+			He never misses an opportunity to teach and to mentor with junior members of the team.
+
+			I'd welcome the opportunity to work with Henrique again and I'd highly recommend him to anybody looking for a strong but flexible senior frontend developer.`,
+		},
+		{
 			name: "Ygor Fraga",
 			photo: "/webp/ygor.webp",
 			linkedin: "https://www.linkedin.com/in/ygordefraga/",
-			message:
-				"During my tenure at 4all, I had the privilege of collaborating closely with Henrique, whose proactive nature and extensive tech expertise left a profound impact. Henrique excels in front-end development, demonstrating exceptional proficiency particularly in React, while showcasing a deep understanding of various other technologies. His proactive approach and depth of knowledge make him an invaluable asset to any project, consistently delivering high-quality results.",
+			message: `During my tenure at 4all, I had the privilege of collaborating closely with Henrique, whose proactive nature and extensive tech expertise left a profound impact. Henrique excels in front-end development, demonstrating exceptional proficiency particularly in React, while showcasing a deep understanding of various other technologies. 
+				
+				His proactive approach and depth of knowledge make him an invaluable asset to any project, consistently delivering high-quality results.`,
 		},
 		{
 			name: "Diego Pereira dos Santos",
 			photo: "/webp/diego.webp",
 			linkedin:
 				"https://www.linkedin.com/in/diego-pereira-dos-santos-b7790218a",
-			message:
-				"I am immensely grateful to have had Henrique as my mentor. His guidance and support were essential to my growth as a frontend developer. He demonstrates deep technical knowledge and a remarkable ability to solve complex problems. He was always available to offer guidance and support, helping me enhance my skills. It was a pleasure working with you at Wevolt. Thank you, my friend.",
+			message: `I am immensely grateful to have had Henrique as my mentor. His guidance and support were essential to my growth as a frontend developer. He demonstrates deep technical knowledge and a remarkable ability to solve complex problems. 
+				
+				He was always available to offer guidance and support, helping me enhance my skills. It was a pleasure working with you at Wevolt. 
+				
+				Thank you, my friend.`,
 		},
 		{
 			name: "Olavio Lacerda 🚀",
 			photo: "/webp/olavio.webp",
 			linkedin: "https://www.linkedin.com/in/olaviolacerda",
-			message:
-				"I had the pleasure of working closely with Henrique for approximately two years, and I can confidently say he is an outstanding colleague and a highly skilled developer. Henrique's focus and dedication to his work are truly commendable, and his expertise in React.js is exemplary. He consistently delivers high-quality results and demonstrates a deep understanding of complex technical concepts. I highly recommend Henrique for any project or team looking to excel in React.js development.",
+			message: `I had the pleasure of working closely with Henrique for approximately two years, and I can confidently say he is an outstanding colleague and a highly skilled developer. Henrique's focus and dedication to his work are truly commendable, and his expertise in React.js is exemplary. 
+			
+			He consistently delivers high-quality results and demonstrates a deep understanding of complex technical concepts. 
+				
+				I highly recommend Henrique for any project or team looking to excel in React.js development.`,
 		},
 	]
 
