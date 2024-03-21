@@ -73,6 +73,7 @@ export default function CompanyPage({ pageData }: { pageData: PageData }) {
 								md: "20px",
 							}}
 							color={"#c3cad5"}
+							whiteSpace="pre-line"
 						>
 							{pageData.about}
 						</Text>
@@ -200,6 +201,7 @@ export default function CompanyPage({ pageData }: { pageData: PageData }) {
 						lineHeight={"1.667em"}
 						fontWeight={400}
 						fontSize={{ base: "15px", md: "18px" }}
+						whiteSpace={"pre-line"}
 					>
 						{pageData.dutiesAndResponsibilities}
 					</Text>
@@ -324,7 +326,7 @@ export default function CompanyPage({ pageData }: { pageData: PageData }) {
 							>
 								Photos
 							</Text>
-							<SimpleGrid columns={{ base: 2, md: 3 }} spacing={10}>
+							<SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
 								{pageData.photos.map((photo, index) => (
 									<HStack
 										onClick={() => {
