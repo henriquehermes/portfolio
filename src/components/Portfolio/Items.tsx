@@ -1,17 +1,6 @@
 "use client"
 
-import React from "react"
-import {
-	Avatar,
-	Box,
-	Flex,
-	Icon,
-	IconButton,
-	Image,
-	Stack,
-	Text,
-	useBreakpointValue,
-} from "@chakra-ui/react"
+import { Box, Flex, Image, Text } from "@chakra-ui/react"
 import Link from "next/link"
 
 interface CardProps {

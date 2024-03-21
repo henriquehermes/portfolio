@@ -11,11 +11,12 @@ import {
 	Text,
 	Textarea,
 } from "@chakra-ui/react"
-import { BsPerson } from "react-icons/bs"
-import { MdOutlineEmail } from "react-icons/md"
-import Container from "../Layout/Container"
-import { FaArrowRight } from "react-icons/fa"
 import { useForm } from "react-hook-form"
+import { BsPerson } from "react-icons/bs"
+import { FaArrowRight } from "react-icons/fa"
+import { MdOutlineEmail } from "react-icons/md"
+
+import Container from "../Layout/Container"
 
 export type FormData = {
 	name: string

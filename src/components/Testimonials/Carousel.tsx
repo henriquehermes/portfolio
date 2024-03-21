@@ -1,22 +1,9 @@
 "use client"
 
-import React, { ReactElement } from "react"
-import {
-	Avatar,
-	Box,
-	Flex,
-	Icon,
-	IconButton,
-	Image,
-	Stack,
-	Text,
-	useBreakpointValue,
-} from "@chakra-ui/react"
-// Here we have used react-icons package for the icons
+import { Box, Flex, IconButton, Image, Text } from "@chakra-ui/react"
+import { useState } from "react"
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi"
-// And react-slick as our Carousel Lib
 import Slider from "react-slick"
-import { FaReact } from "react-icons/fa"
 
 // Settings for the slider
 const settings = {
@@ -105,11 +92,10 @@ const Card = ({ name, linkedin, photo, message }: CardProps) => {
 export default function Carousel() {
 	// As we have used custom buttons, we need a reference variable to
 	// change the state
-	const [slider, setSlider] = React.useState<Slider | null>(null)
+	const [slider, setSlider] = useState<Slider | null>(null)
 
 	// These are the breakpoints which changes the position of the
 	// buttons as the screen size changes
-	const top = useBreakpointValue({ base: "90%", md: "55%" })
 
 	// These are the images used in the slide
 	const testimonials = [

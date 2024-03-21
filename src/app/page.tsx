@@ -1,12 +1,12 @@
 "use client"
 
-import { Fade, Flex, IconButton } from "@chakra-ui/react"
-import Introduction from "@/components/Introduction"
 import AboutMe from "@/components/AboutMe"
-import WorkedOn from "@/components/WorkedOn"
-import Skills from "@/components/Skills"
+import Introduction from "@/components/Introduction"
 import Portfolio from "@/components/Portfolio"
+import Skills from "@/components/Skills"
 import Testimonials from "@/components/Testimonials"
+import WorkedOn from "@/components/WorkedOn"
+import { Fade, Flex, IconButton } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import { MdKeyboardArrowUp } from "react-icons/md"
 

@@ -14,10 +14,12 @@ import {
 	keyframes,
 	useMediaQuery,
 } from "@chakra-ui/react"
-import Container from "../Layout/Container"
-import { PiHamburger } from "react-icons/pi"
-import { useEffect, useState } from "react"
 import Link from "next/link"
+import { useEffect, useState } from "react"
+import { PiHamburger } from "react-icons/pi"
+
+import Container from "../Layout/Container"
+
 
 const Header = () => {
 	const [isVisible, setIsVisible] = useState(false)

@@ -1,3 +1,22 @@
 {
-  "extends": "next/core-web-vitals"
+	"extends": [
+		"next/core-web-vitals",
+		"eslint:recommended",
+		"plugin:react-hooks/recommended",
+		"plugin:@typescript-eslint/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["@typescript-eslint", "eslint-plugin-import-helpers"],
+	"rules": {
+		"import-helpers/order-imports": [
+			"warn",
+			{
+				// example configuration
+				"newlinesBetween": "always",
+				"groups": ["module", "/^@shared/", ["parent", "sibling", "index"]],
+				"alphabetize": { "order": "asc", "ignoreCase": true }
+			}
+		]
+	},
+	"root": true
 }

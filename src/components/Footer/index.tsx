@@ -1,14 +1,6 @@
 "use client"
 
-import {
-	Box,
-	Image,
-	Container,
-	Flex,
-	Stack,
-	Text,
-	useColorModeValue,
-} from "@chakra-ui/react"
+import { Box, Image, Container, Flex, Stack, Text } from "@chakra-ui/react"
 import { FaArrowRight } from "react-icons/fa"
 
 export default function Footer() {

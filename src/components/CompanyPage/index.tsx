@@ -1,5 +1,6 @@
 "use client"
 
+import { PageData } from "@/interface/jobs"
 import {
 	Box,
 	Button,
@@ -20,11 +21,10 @@ import {
 	Text,
 	VStack,
 } from "@chakra-ui/react"
-import { PageData } from "@/interface/jobs"
-import { FaCheckCircle } from "react-icons/fa"
-import { MdOutlineKeyboardArrowDown } from "react-icons/md"
 import Link from "next/link"
 import { useState } from "react"
+import { FaCheckCircle } from "react-icons/fa"
+import { MdOutlineKeyboardArrowDown } from "react-icons/md"
 
 export default function CompanyPage({ pageData }: { pageData: PageData }) {
 	const [fullPhoto, setFullPhoto] = useState<string | undefined>()

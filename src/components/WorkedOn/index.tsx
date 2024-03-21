@@ -1,8 +1,9 @@
 "use client"
 
 import { Divider, Flex, Text } from "@chakra-ui/react"
-import Container from "../Layout/Container"
 import { Image } from "@chakra-ui/react"
+
+import Container from "../Layout/Container"
 
 const Company = ({
 	image,

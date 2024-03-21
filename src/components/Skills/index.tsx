@@ -1,10 +1,8 @@
 "use client"
 
 import { Box, Flex, Icon, Stack, Text } from "@chakra-ui/react"
-import Container from "../Layout/Container"
 import { ReactElement } from "react"
 import { FaNodeJs, FaReact } from "react-icons/fa"
-import { TbBrandAzure, TbBrandNextjs } from "react-icons/tb"
 import { IoLogoJavascript } from "react-icons/io"
 import {
 	SiAdobexd,
@@ -27,6 +25,9 @@ import {
 	SiTestinglibrary,
 	SiTypescript,
 } from "react-icons/si"
+import { TbBrandAzure, TbBrandNextjs } from "react-icons/tb"
+
+import Container from "../Layout/Container"
 
 interface CardProps {
 	heading: string

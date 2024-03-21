@@ -1,4 +1,5 @@
 import { Flex, Text } from "@chakra-ui/react"
+
 import Container from "../Layout/Container"
 import Items from "./Items"
 

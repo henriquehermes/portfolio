@@ -1,11 +1,12 @@
 "use client"
 
 import { Flex, IconButton, Text } from "@chakra-ui/react"
-import Container from "../Layout/Container"
 import { FaLinkedinIn } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
 import { IoDocumentText } from "react-icons/io5"
 import Typewriter from "typewriter-effect"
+
+import Container from "../Layout/Container"
 
 const Introduction = () => {
 	return (
