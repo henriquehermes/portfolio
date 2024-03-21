@@ -15,7 +15,7 @@ const Card = ({ company, image1, link }: CardProps) => {
 	return (
 		<Box
 			flexDir={{ base: "column", lg: "row" }}
-			maxW={{ base: "200px", md: "275px" }}
+			maxW={{ base: "full", md: "275px" }}
 			maxH={{ base: "200px", md: "auto" }}
 			w={"full"}
 			borderRadius="28px"

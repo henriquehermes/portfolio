@@ -46,13 +46,13 @@ const AboutMe = () => {
 							such as TypeScript, GraphQL, NextJS, and Storybook.
 							<br /> <br />
 							My passion for technology drives me to constantly learn new
-							skills and explore innovative solutions so that I can enhance
-							user experience and satisfaction. I am also committed
-							to following best practices of software development,
-							such as Agile principles, documentation, testing, and code
-							quality. I enjoy working in a dynamic and collaborative
-							environment, where I can contribute to the growth and
-							success of the company and its clients.
+							skills and explore innovative solutions so that I can
+							enhance user experience and satisfaction. I am also
+							committed to following best practices of software
+							development, such as Agile principles, documentation,
+							testing, and code quality. I enjoy working in a dynamic and
+							collaborative environment, where I can contribute to the
+							growth and success of the company and its clients.
 						</Text>
 					</Flex>
 

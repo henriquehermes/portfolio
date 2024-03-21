@@ -1,5 +1,8 @@
 "use client"
 
+import { useEffect, useState } from "react"
+import { MdKeyboardArrowUp } from "react-icons/md"
+
 import AboutMe from "@/components/AboutMe"
 import Contact from "@/components/Contact"
 import Introduction from "@/components/Introduction"
@@ -8,8 +11,7 @@ import Skills from "@/components/Skills"
 import Testimonials from "@/components/Testimonials"
 import WorkedOn from "@/components/WorkedOn"
 import { Fade, Flex, IconButton } from "@chakra-ui/react"
-import { useEffect, useState } from "react"
-import { MdKeyboardArrowUp } from "react-icons/md"
+import { motion } from "framer-motion"
 
 export default function Home() {
 	const [isVisible, setIsVisible] = useState(false)
@@ -43,12 +45,101 @@ export default function Home() {
 		<Flex mx="auto" w="full" height="full" flexDir="column" bgColor="#1b1f24">
 			<Flex flexDir={"column"}>
 				<Introduction />
-				<AboutMe />
-				<Portfolio />
-				<Skills />
-				<WorkedOn />
-				<Testimonials />
-				<Contact />
+				<motion.div
+					initial={{
+						opacity: 0,
+						translateY: "150px",
+					}}
+					whileInView={{
+						opacity: 1,
+						translateY: "0px",
+						transition: {
+							duration: 0.5,
+						},
+					}}
+				>
+					<AboutMe />
+				</motion.div>
+
+				<motion.div
+					initial={{
+						opacity: 0,
+						translateY: "150px",
+					}}
+					whileInView={{
+						opacity: 1,
+						translateY: "0px",
+						transition: {
+							duration: 0.5,
+						},
+					}}
+				>
+					<Portfolio />
+				</motion.div>
+
+				<motion.div
+					initial={{
+						opacity: 0,
+						translateY: "150px",
+					}}
+					whileInView={{
+						opacity: 1,
+						translateY: "0px",
+						transition: {
+							duration: 0.5,
+						},
+					}}
+				>
+					<Skills />
+				</motion.div>
+
+				<motion.div
+					initial={{
+						opacity: 0,
+						translateY: "150px",
+					}}
+					whileInView={{
+						opacity: 1,
+						translateY: "0px",
+						transition: {
+							duration: 0.5,
+						},
+					}}
+				>
+					<WorkedOn />
+				</motion.div>
+
+				<motion.div
+					initial={{
+						opacity: 0,
+						translateY: "150px",
+					}}
+					whileInView={{
+						opacity: 1,
+						translateY: "0px",
+						transition: {
+							duration: 0.5,
+						},
+					}}
+				>
+					<Testimonials />
+				</motion.div>
+
+				<motion.div
+					initial={{
+						opacity: 0,
+						translateY: "150px",
+					}}
+					whileInView={{
+						opacity: 1,
+						translateY: "0px",
+						transition: {
+							duration: 0.5,
+						},
+					}}
+				>
+					<Contact />
+				</motion.div>
 
 				<Fade in={isVisible}>
 					<IconButton

@@ -13,7 +13,12 @@
 			{
 				// example configuration
 				"newlinesBetween": "always",
-				"groups": ["module", "/^@shared/", ["parent", "sibling", "index"]],
+				"groups": [
+					"/^react/",
+					"module",
+					["parent", "sibling", "index"],
+					"/^@shared/"
+				],
 				"alphabetize": { "order": "asc", "ignoreCase": true }
 			}
 		]

@@ -1,6 +1,7 @@
 "use client"
 
 import { Flex, IconButton, Text } from "@chakra-ui/react"
+import { motion } from "framer-motion"
 import { FaLinkedinIn } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
 import { IoDocumentText } from "react-icons/io5"
@@ -72,54 +73,96 @@ const Introduction = () => {
 					<Text color="#fff" fontWeight={700}>
 						ABOUT ME
 					</Text>
-					<Text>
-						With over six years of experience in ReactJS and React Native,
-						I excel in crafting scalable applications through
-						collaboration and innovation, driven by my passion for
-						technology and commitment to best practices.
-					</Text>
+					<motion.div
+						initial={{
+							opacity: 0,
+							x: "150px",
+						}}
+						whileInView={{
+							opacity: 1,
+							x: "0px",
+							transition: {
+								duration: 0.5,
+							},
+						}}
+					>
+						<Text>
+							With over six years of experience in ReactJS and React
+							Native, I excel in crafting scalable applications through
+							collaboration and innovation, driven by my passion for
+							technology and commitment to best practices.
+						</Text>
+					</motion.div>
 
 					<Flex flexDir="column" my="50px">
 						<Text color="#fff" fontWeight={700}>
 							MY WORK
 						</Text>
-						<Text>
-							Known for relentless dedication and tireless efforts, I
-							embody the epitome of hard work, consistently surpassing
-							expectations with unwavering commitment and diligence.
-						</Text>
+						<motion.div
+							initial={{
+								opacity: 0,
+								x: "150px",
+							}}
+							whileInView={{
+								opacity: 1,
+								x: "0px",
+								transition: {
+									duration: 0.7,
+								},
+							}}
+						>
+							<Text>
+								Known for relentless dedication and tireless efforts, I
+								embody the epitome of hard work, consistently surpassing
+								expectations with unwavering commitment and diligence.
+							</Text>
+						</motion.div>
 					</Flex>
 
 					<Text color="#fff" fontWeight={700}>
 						FOLLOW ME
 					</Text>
-					<Flex gap={4} mt="5px">
-						<IconButton
-							onClick={() =>
-								window.open(
-									"https://www.linkedin.com/in/henrique-hermes-59703a121/",
-									"_blank"
-								)
-							}
-							borderRadius={"full"}
-							fontSize={"25px"}
-							icon={<FaLinkedinIn />}
-							aria-label={"linkedin"}
-						/>
+					<motion.div
+						initial={{
+							opacity: 0,
+							x: "150px",
+						}}
+						whileInView={{
+							opacity: 1,
+							x: "0px",
+							transition: {
+								duration: 0.9,
+							},
+						}}
+					>
+						<Flex gap={4} mt="5px">
+							<IconButton
+								onClick={() =>
+									window.open(
+										"https://www.linkedin.com/in/henrique-hermes-59703a121/",
+										"_blank"
+									)
+								}
+								borderRadius={"full"}
+								fontSize={"25px"}
+								icon={<FaLinkedinIn />}
+								aria-label={"linkedin"}
+							/>
 
-						<IconButton
-							onClick={() =>
-								window.open(
-									"https://github.com/henriquehermes",
-									"_blank"
-								)
-							}
-							borderRadius={"full"}
-							fontSize={"25px"}
-							icon={<FaGithub />}
-							aria-label={"github"}
-						/>
-					</Flex>
+							<IconButton
+								onClick={() =>
+									window.open(
+										"https://github.com/henriquehermes",
+										"_blank"
+									)
+								}
+								borderRadius={"full"}
+								fontSize={"25px"}
+								icon={<FaGithub />}
+								aria-label={"github"}
+							/>
+						</Flex>
+					</motion.div>
 				</Flex>
 			</Flex>
 		</Container>
