@@ -11,6 +11,22 @@ const font = Space_Grotesk({ subsets: ["latin"] })
 export const metadata: Metadata = {
 	title: "Henrique Hermes",
 	description: "My Portfolio",
+	keywords: ["Next.js", "React", "TypeScript"],
+	authors: [
+		{
+			name: "Henrique Hermes",
+			url: "https://www.linkedin.com/in/henrique-hermes-59703a121/",
+		},
+	],
+	creator: "Henrique Hermes",
+	publisher: "Henrique Hermes",
+	openGraph: {
+		title: "Henrique Hermes",
+		description: "My Portfolio",
+		type: "website",
+		url: "https://henriquehermes.com.au",
+		images: "https://www.henriquehermes.com.au/site-logo.svg",
+	},
 }
 
 export default function RootLayout({
