@@ -28,9 +28,7 @@ const pageData: PageData = {
 	client: "InfraTI",
 	duration: "7 months",
 	reference: {
-		number: "+55 51 99342-7995",
 		name: "Fernando Nachtigall",
-		email: "Fernando.nachtigall@infrati.com.br",
 	},
 	photos: [
 		"/projects/infrati/infrati-1.webp",
