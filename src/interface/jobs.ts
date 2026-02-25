@@ -11,9 +11,9 @@ export interface PageData {
 	duration: string
 	client: string
 	reference: {
-		number: string
+		number?: string
 		name: string
-		email: string
+		email?: string
 	}
 	photos: string[]
 }
