@@ -36,6 +36,8 @@ export default function Reference({ pageData }: { pageData: PageData }) {
 				{pageData.reference.name}
 			</Text>
 
+{pageData.reference?.number && 
+<>
 			<Text
 				fontSize={{ base: "16px", md: "18px" }}
 				fontWeight={500}
@@ -62,7 +64,12 @@ export default function Reference({ pageData }: { pageData: PageData }) {
 			>
 				{pageData.reference.number}
 			</Text>
+			</>
+			}
 
+
+{pageData.reference?.email && 
+<>
 			<Text
 				fontSize={{ base: "16px", md: "18px" }}
 				fontWeight={500}
@@ -89,6 +96,7 @@ export default function Reference({ pageData }: { pageData: PageData }) {
 			>
 				{pageData.reference.email}
 			</Text>
+			</>}
 		</Flex>
 	)
 }
